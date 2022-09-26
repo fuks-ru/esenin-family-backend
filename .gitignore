@@ -1,0 +1,13 @@
+node_modules
+/public
+tsconfig.*tsbuildinfo
+dist
+var
+
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

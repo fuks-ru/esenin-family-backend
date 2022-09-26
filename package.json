@@ -1,0 +1,21 @@
+{
+  "name": "esenin-family-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dmitry Fuks",
+  "license": "MIT",
+  "private": true,
+  "packageManager": "yarn@3.2.3",
+  "workspaces": [
+    "entries/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspaces foreach --interlaced --verbose --jobs=unlimited --parallel run dev"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
+    "eslint": "^8.23.1",
+    "eslint-config-fuks": "^1.8.2",
+    "typescript": "^4.8.3"
+  }
+}
