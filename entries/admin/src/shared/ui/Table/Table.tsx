@@ -1,62 +1,32 @@
 import { Button, Table as TableBase, TableProps } from 'antd';
-import { ReactElement, ThHTMLAttributes, useMemo } from 'react';
+import { ColumnsType } from 'antd/es/table';
+import { ReactElement, useMemo } from 'react';
 import { DeleteOutlined, EyeOutlined } from '@ant-design/icons';
-
-import { EditableCell } from 'admin-frontend/shared/ui/Table/EditableCell/EditableCell';
-import { EditableRow } from 'admin-frontend/shared/ui/Table/EditableRow/EditableRow';
-import { TColumnTypes } from 'admin-frontend/shared/ui/Table/types/TColumnTypes';
-
-const components = {
-  body: {
-    row: EditableRow,
-    cell: EditableCell,
-  },
-};
 
 interface IProps<RecordType extends object>
   extends Omit<TableProps<RecordType>, 'columns'> {
-  columns: TColumnTypes<RecordType>;
-  handleSave?: (data: RecordType) => void | Promise<void>;
-  handleDelete?: (id: string) => void | Promise<void>;
-  handleDetail?: (id: string) => void | Promise<void>;
+  columns: ColumnsType<RecordType>;
+  onDelete?: (record: RecordType) => void | Promise<void>;
+  onDetail?: (record: RecordType) => void | Promise<void>;
   dataSource: Array<RecordType & { key: string }>;
 }
 
-/**
- * Обертка над antd таблицей с функцией изменения и удаления столбцов.
- */
 export const Table = <RecordType extends object>({
   columns: defaultColumns,
-  handleSave,
-  handleDelete,
-  handleDetail,
+  onDelete,
+  onDetail,
   dataSource,
   ...props
 }: IProps<RecordType>): ReactElement => {
   const columns = useMemo(() => {
-    const result = defaultColumns.map((column) => {
-      if (!column.editable) {
-        return column;
-      }
-
-      return {
-        ...column,
-        onCell: () => ({
-          dataIndex: column.dataIndex,
-          title: column.title as string,
-          metadata: column.metadata,
-        }),
-      };
-    });
-
-    if (!handleDelete && !handleDetail) {
-      return result;
+    if (!onDelete && !onDetail) {
+      return defaultColumns;
     }
 
     return [
-      ...result,
+      ...defaultColumns,
       {
-        title: 'Actions',
+        title: 'Действия',
         render: (
           _: unknown,
           record: RecordType & {
@@ -64,18 +34,18 @@ export const Table = <RecordType extends object>({
           },
         ) => (
           <>
-            {handleDetail && (
+            {onDetail && (
               <Button
                 onClick={() => {
-                  void handleDetail(record.key);
+                  void onDetail(record);
                 }}
                 icon={<EyeOutlined />}
               />
             )}
-            {handleDelete && (
+            {onDelete && (
               <Button
                 onClick={() => {
-                  void handleDelete(record.key);
+                  void onDelete(record);
                 }}
                 icon={<DeleteOutlined />}
               />
@@ -84,22 +54,14 @@ export const Table = <RecordType extends object>({
         ),
       },
     ];
-  }, [defaultColumns, handleDelete, handleDetail]);
-
-  const onRow = (record: RecordType): ThHTMLAttributes<unknown> =>
-    ({
-      record,
-      handleSave,
-    } as ThHTMLAttributes<unknown>);
+  }, [defaultColumns, onDelete, onDetail]);
 
   return (
     <TableBase<RecordType>
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
       dataSource={dataSource}
-      onRow={onRow}
-      columns={columns as TColumnTypes<RecordType>}
-      components={components}
+      columns={columns as ColumnsType<RecordType>}
     />
   );
 };

@@ -58,10 +58,10 @@ export const getBaseQuery = (): BaseQueryFn<IQueryArgs> => async (args) => {
       };
     }
 
-    await message.error('Unknown error');
+    await message.error('Неизвестная ошибка');
 
     return {
-      error: 'Unknown error',
+      error: 'Неизвестная ошибка',
     };
   }
 };

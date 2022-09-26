@@ -10,7 +10,8 @@
     "entries/*"
   ],
   "scripts": {
-    "dev": "yarn workspaces foreach --interlaced --verbose --jobs=unlimited --parallel run dev"
+    "dev": "yarn workspaces foreach --interlaced --verbose --jobs=unlimited --parallel run dev",
+    "build:lib": "yarn workspaces foreach --interlaced --verbose --jobs=unlimited --parallel run build:lib"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",

@@ -71,11 +71,16 @@ const config: Configuration = {
           },
         ],
       },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
     ],
   },
   devServer: {
     port: 3_000,
     hot: true,
+    historyApiFallback: true,
   },
 };
 
