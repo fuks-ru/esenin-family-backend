@@ -17,6 +17,7 @@ module.exports = {
   },
   rules: {
     'jsdoc/require-jsdoc': ['off'],
+    'i18next/no-literal-string': ['off'],
   },
   overrides: [
     {
