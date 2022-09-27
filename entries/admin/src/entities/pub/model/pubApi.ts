@@ -3,7 +3,7 @@ import {
   TApiArgs,
   TApiBody,
   TApiResponse,
-} from '@difuks/esenin-family-backend/dist/lib';
+} from '@difuks/esenin-family-backend';
 
 import { getBaseQuery } from 'admin/shared/api/api';
 

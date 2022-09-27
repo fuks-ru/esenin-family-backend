@@ -5,12 +5,12 @@ import {
   TApiBody,
   OperationMethods,
 } from '@difuks/esenin-family-backend';
-import { isDevelopment } from '@difuks/common/dist/constants';
+import { urls } from '@difuks/esenin-family-constants';
 import {
   errorInterceptor,
   UnknownError,
   ValidationError,
-} from '@difuks/common/dist/frontend';
+} from '@difuks/common-frontend';
 import { BaseQueryFn } from '@reduxjs/toolkit/query';
 import { message } from 'antd';
 
@@ -24,9 +24,7 @@ export let api: Client;
  * Инициализирует Api.
  */
 export const initApi = async (): Promise<void> => {
-  api = await getApi(
-    isDevelopment ? 'http://localhost:3001' : 'https://esenin-family.ru',
-  );
+  api = await getApi(urls.BACKEND_URL);
 
   api.interceptors.response.use(undefined, errorInterceptor);
   api.defaults.headers.common.i18next = navigator.language;
