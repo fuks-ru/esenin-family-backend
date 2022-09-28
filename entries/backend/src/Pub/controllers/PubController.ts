@@ -51,6 +51,8 @@ export class PubController {
     @Body() body: PubUpdateRequest,
     @Param('id') id: string,
   ): Promise<Pub> {
+    console.log(body, id)
+
     return this.pubService.update({
       ...body,
       id,

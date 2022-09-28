@@ -1,7 +1,7 @@
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Injectable } from '@nestjs/common';
-import { SystemErrorFactory } from '@difuks/common-backend';
+import { SystemErrorFactory } from '@fuks-ru/common-backend';
 
 import { Pub } from 'backend/Pub/entities/Pub';
 import { ErrorCode } from 'backend/Config/enums/ErrorCode';

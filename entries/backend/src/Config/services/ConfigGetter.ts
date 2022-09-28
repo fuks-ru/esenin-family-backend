@@ -1,10 +1,11 @@
-import { EnvGetter } from '@difuks/common-backend';
+import { EnvGetter } from '@fuks-ru/common-backend';
 import { HttpStatus, Injectable } from '@nestjs/common';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import * as path from 'node:path';
 import * as process from 'node:process';
 import { I18nTranslation } from 'nestjs-i18n';
-import { API_PREFIX, domainUrl, ports } from '@difuks/esenin-family-constants';
+import { API_PREFIX, domainUrl, ports } from '@fuks-ru/esenin-family-constants';
+import { NestMinioOptions } from 'nestjs-minio';
 
 import { ormConfig } from 'backend/Config/utils/ormconfig';
 import { ErrorCode } from 'backend/Config/enums/ErrorCode';
@@ -59,6 +60,16 @@ export class ConfigGetter {
     return {
       'en-US': enUs,
       'ru-RU': ruRU,
+    };
+  }
+
+  public getMinioConfig(): NestMinioOptions {
+    return {
+      endPoint: 'localhost',
+      port: 9_000,
+      useSsl: false,
+      accessKey: 'minio99',
+      secretKey: 'minio123',
     };
   }
 

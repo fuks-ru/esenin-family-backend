@@ -1,8 +1,8 @@
-import { EnvGetter, SwaggerService } from '@difuks/common-backend';
+import { EnvGetter, SwaggerService } from '@fuks-ru/common-backend';
 import { NestFactory } from '@nestjs/core';
 import cookieParser from 'cookie-parser';
 import { NestExpressApplication } from '@nestjs/platform-express';
-import { urls } from '@difuks/esenin-family-constants';
+import { urls } from '@fuks-ru/esenin-family-constants';
 
 import { AppModule } from 'backend/AppModule';
 import { ConfigGetter } from 'backend/Config/services/ConfigGetter';

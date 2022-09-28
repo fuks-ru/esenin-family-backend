@@ -1,5 +1,5 @@
 {
-  "name": "@difuks/esenin-family-backend",
+  "name": "@fuks-ru/esenin-family-backend",
   "version": "0.0.1",
   "packageManager": "yarn@3.2.3",
   "scripts": {
@@ -10,9 +10,9 @@
   "module": "./dist/lib/index.js",
   "types": "./dist/lib/index.d.ts",
   "devDependencies": {
-    "@difuks/common": "0.0.1",
-    "@difuks/common-backend": "0.0.1",
-    "@difuks/esenin-family-constants": "workspace:0.0.1",
+    "@fuks-ru/common": "0.0.2",
+    "@fuks-ru/common-backend": "0.1.4",
+    "@fuks-ru/esenin-family-constants": "workspace:0.0.1",
     "@nestjs/common": "^9.1.2",
     "@nestjs/core": "^9.1.2",
     "@nestjs/platform-express": "^9.1.2",
@@ -27,6 +27,7 @@
     "cross-env": "^7.0.3",
     "express": "^4.18.1",
     "nestjs-i18n": "^9.1.10",
+    "nestjs-minio": "^2.2.1",
     "openapi-client-axios": "^5.3.0",
     "openapi-client-axios-typegen": "^5.3.0",
     "pg": "^8.8.0",
@@ -38,7 +39,7 @@
     "tsconfig-paths": "^4.1.0",
     "ttypescript": "^1.5.13",
     "typeorm": "^0.3.10",
-    "typescript": "^4.8.3",
+    "typescript": "4.8.3",
     "typescript-transform-paths": "^3.3.1"
   },
   "peerDependencies": {

@@ -1,4 +1,4 @@
-import { isDevelopment, ports } from '@difuks/esenin-family-constants';
+import { isDevelopment, ports } from '@fuks-ru/esenin-family-constants';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import NodePolyfillPlugin from 'node-polyfill-webpack-plugin';
 import * as path from 'node:path';

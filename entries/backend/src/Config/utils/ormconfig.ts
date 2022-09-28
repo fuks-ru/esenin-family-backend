@@ -1,4 +1,4 @@
-import { isDevelopment } from '@difuks/esenin-family-constants';
+import { isDevelopment } from '@fuks-ru/esenin-family-constants';
 import { DataSource, DataSourceOptions } from 'typeorm';
 
 const rootDir = isDevelopment ? 'src' : 'dist/build';

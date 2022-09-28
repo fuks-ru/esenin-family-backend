@@ -3,14 +3,14 @@ import {
   Client,
   TApiArgs,
   TApiBody,
-  OperationMethods,
-} from '@difuks/esenin-family-backend';
-import { urls } from '@difuks/esenin-family-constants';
+  TMethods,
+} from '@fuks-ru/esenin-family-backend';
+import { urls } from '@fuks-ru/esenin-family-constants';
 import {
   errorInterceptor,
   UnknownError,
   ValidationError,
-} from '@difuks/common-frontend';
+} from '@fuks-ru/common-frontend';
 import { BaseQueryFn } from '@reduxjs/toolkit/query';
 import { message } from 'antd';
 
@@ -30,9 +30,7 @@ export const initApi = async (): Promise<void> => {
   api.defaults.headers.common.i18next = navigator.language;
 };
 
-export type IQueryArgs<
-  Method extends keyof OperationMethods = keyof OperationMethods,
-> = {
+export type IQueryArgs<Method extends TMethods = TMethods> = {
   method: Method;
   params?: TApiArgs<Method>;
   body?: TApiBody<Method>;

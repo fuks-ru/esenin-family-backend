@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
-import { SwaggerService } from '@difuks/common-backend';
+import { SwaggerService } from '@fuks-ru/common-backend';
 
 import { AppModule } from 'backend/AppModule';
 import { ConfigGetter } from 'backend/Config/services/ConfigGetter';

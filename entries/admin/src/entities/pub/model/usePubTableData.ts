@@ -1,14 +1,14 @@
 import { ColumnsType } from 'antd/es/table';
-import { Components } from '@difuks/esenin-family-backend';
+import { Schemas } from '@fuks-ru/esenin-family-backend';
 
 import { pubApi } from 'admin/entities/pub';
 
 interface IResult {
-  columns: ColumnsType<Components.Schemas.Pub>;
-  dataSource: Array<Components.Schemas.Pub & { key: string }>;
+  columns: ColumnsType<Schemas.Pub>;
+  dataSource: Array<Schemas.Pub & { key: string }>;
 }
 
-const columns: ColumnsType<Components.Schemas.Pub> = [
+const columns: ColumnsType<Schemas.Pub> = [
   {
     title: 'Название',
     dataIndex: 'name',
