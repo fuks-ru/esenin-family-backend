@@ -1,4 +1,3 @@
-import { isDevelopment, ports } from '@fuks-ru/esenin-family-constants';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import NodePolyfillPlugin from 'node-polyfill-webpack-plugin';
 import * as path from 'node:path';
@@ -14,6 +13,7 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 import 'webpack-dev-server';
+import { isDevelopment, WEBPACK_PORT } from 'admin/shared/config/constants';
 
 const plugins: WebpackPluginInstance[] = [
   new HtmlWebpackPlugin({
@@ -78,7 +78,7 @@ const config: Configuration = {
     ],
   },
   devServer: {
-    port: ports.ADMIN_FRONTEND_PORT,
+    port: WEBPACK_PORT,
     hot: true,
     historyApiFallback: true,
   },

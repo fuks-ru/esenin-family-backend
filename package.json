@@ -7,12 +7,13 @@
   "private": true,
   "packageManager": "yarn@3.2.3",
   "workspaces": [
-    "entries/*",
-    "packages/*"
+    "entries/*"
   ],
   "scripts": {
     "dev": "yarn workspaces foreach --interlaced --verbose --jobs=unlimited --parallel run dev",
-    "build:lib": "yarn workspaces foreach --interlaced --verbose --jobs=unlimited --parallel run build:lib"
+    "build:lib": "yarn workspaces foreach --interlaced --verbose --jobs=unlimited --parallel run build:lib",
+    "lint": "eslint \"{**/*,*}.{ts,tsx,js,jsx,json}\"",
+    "lint:fix": "yarn run lint --fix"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",

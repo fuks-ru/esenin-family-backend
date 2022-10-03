@@ -3,14 +3,10 @@ import { HttpStatus, Injectable } from '@nestjs/common';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import * as path from 'node:path';
 import * as process from 'node:process';
-import { I18nTranslation } from 'nestjs-i18n';
-import { API_PREFIX, domainUrl, ports } from '@fuks-ru/esenin-family-constants';
 import { NestMinioOptions } from 'nestjs-minio';
 
 import { ormConfig } from 'backend/Config/utils/ormconfig';
 import { ErrorCode } from 'backend/Config/enums/ErrorCode';
-import enUs from 'backend/__i18n__/enUS.json';
-import ruRU from 'backend/__i18n__/ruRU.json';
 
 @Injectable()
 export class ConfigGetter {
@@ -23,44 +19,28 @@ export class ConfigGetter {
 
   public constructor(private readonly envGetter: EnvGetter) {}
 
-  /**
-   * Получает порт для апи.
-   */
   public getApiPort(): number {
-    return ports.BACKEND_PORT;
+    return 3_001;
   }
 
-  /**
-   * Получает префикс API.
-   */
   public getApiPrefix(): string {
-    return API_PREFIX;
+    return '/mainApi';
   }
 
-  /**
-   * Получает корневой домен.
-   */
-  public getDomain(): string {
-    return domainUrl;
+  public getAdminDomainWithScheme(): string {
+    return this.envGetter.isDev()
+      ? 'http://localhost:3000'
+      : 'https://admin.esenin-family.ru';
   }
 
-  /**
-   * Возвращает конфиг для подключения к БД.
-   */
+  public getRootDomain(): string {
+    return this.envGetter.isDev() ? 'localhost' : 'esenin-family.ru';
+  }
+
   public getTypeOrmConfig(): TypeOrmModuleOptions {
     return this.envGetter.isDev()
       ? this.getDevTypeOrmConfig()
       : this.getProdTypeOrmConfig();
-  }
-
-  public getTranslations(): {
-    'en-US': I18nTranslation;
-    'ru-RU': I18nTranslation;
-  } {
-    return {
-      'en-US': enUs,
-      'ru-RU': ruRU,
-    };
   }
 
   public getMinioConfig(): NestMinioOptions {

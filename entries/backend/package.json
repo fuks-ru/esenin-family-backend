@@ -10,9 +10,8 @@
   "module": "./dist/lib/index.js",
   "types": "./dist/lib/index.d.ts",
   "devDependencies": {
-    "@fuks-ru/common": "0.0.2",
-    "@fuks-ru/common-backend": "0.1.4",
-    "@fuks-ru/esenin-family-constants": "workspace:0.0.1",
+    "@fuks-ru/common": "0.0.6",
+    "@fuks-ru/common-backend": "0.3.3",
     "@nestjs/common": "^9.1.2",
     "@nestjs/core": "^9.1.2",
     "@nestjs/platform-express": "^9.1.2",

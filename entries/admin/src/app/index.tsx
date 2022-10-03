@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 
-import { initApi } from 'admin/shared/api/api';
+import { initMainApi } from 'admin/shared/api';
 import { App } from 'admin/app/App';
 
 const container = document.querySelector('#app');
@@ -12,7 +12,7 @@ if (!container) {
 (async () => {
   const root = createRoot(container);
 
-  await initApi();
+  await initMainApi();
 
   root.render(<App />);
 })();

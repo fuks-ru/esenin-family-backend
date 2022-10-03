@@ -13,8 +13,7 @@ import { ConfigModule } from 'backend/Config/ConfigModule';
     CommonModule.forRootAsync({
       inject: [ConfigGetter],
       useFactory: (configGetter: ConfigGetter) => ({
-        domain: configGetter.getDomain(),
-        translations: configGetter.getTranslations(),
+        domain: configGetter.getRootDomain(),
         apiPrefix: configGetter.getApiPrefix(),
         statusResolver: configGetter.statusResolver,
       }),

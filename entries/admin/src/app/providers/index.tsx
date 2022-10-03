@@ -1,16 +1,19 @@
-import { FC, ReactNode } from 'react';
+import { ComponentType, FC, ReactNode } from 'react';
 import { BrowserRouter, Routes } from 'react-router-dom';
 
 import { ReduxProvider } from 'admin/app/providers/ReduxProvider';
 
 interface IProps {
   children: ReactNode;
+  Wrapper: ComponentType<{ children: ReactNode }>;
 }
 
-export const AppProvider: FC<IProps> = ({ children }) => (
+export const AppProvider: FC<IProps> = ({ children, Wrapper }) => (
   <BrowserRouter>
     <ReduxProvider>
-      <Routes>{children}</Routes>
+      <Wrapper>
+        <Routes>{children}</Routes>
+      </Wrapper>
     </ReduxProvider>
   </BrowserRouter>
 );

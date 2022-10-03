@@ -1,5 +1,6 @@
-import { isDevelopment } from '@fuks-ru/esenin-family-constants';
 import { DataSource, DataSourceOptions } from 'typeorm';
+
+import { isDevelopment } from 'backend/constants';
 
 const rootDir = isDevelopment ? 'src' : 'dist/build';
 
@@ -11,7 +12,7 @@ export const ormConfig: DataSourceOptions = {
   host: process.env.POSTGRES_HOST,
   port: 5_432,
   synchronize: false,
-  database: 'auth',
+  database: 'esenin',
   username: process.env.POSTGRES_USER,
   password: process.env.POSTGRES_PASSWORD,
   entities: [`${rootDir}/**/entities/*.{ts,js}`],

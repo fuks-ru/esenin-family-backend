@@ -5,11 +5,11 @@ import {
   TApiResponse,
 } from '@fuks-ru/esenin-family-backend';
 
-import { getBaseQuery } from 'admin/shared/api/api';
+import { getMainBaseQuery } from 'admin/shared/api';
 
 export const pubApi = createApi({
   reducerPath: 'pub',
-  baseQuery: getBaseQuery(),
+  baseQuery: getMainBaseQuery(),
   endpoints: (builder) => ({
     getList: builder.query<TApiResponse<'pubList'>, void>({
       query: () => ({
