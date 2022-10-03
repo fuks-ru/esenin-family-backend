@@ -5,11 +5,17 @@ import {
   TApiBody,
   TMethods,
 } from '@fuks-ru/esenin-family-backend';
-import { RedirectError, SystemError, ValidationError } from '@fuks-ru/common';
+import {
+  ForbiddenError,
+  RedirectError,
+  SystemError,
+  ValidationError,
+} from '@fuks-ru/common';
 import { BaseQueryFn } from '@reduxjs/toolkit/query';
 import { message } from 'antd';
+import qs from 'qs';
 
-import { backendUrl } from 'admin/shared/config';
+import { authFrontendUrl, backendUrl } from 'admin/shared/config';
 
 // eslint-disable-next-line import/no-mutable-exports
 export let mainApi: Client;
@@ -44,7 +50,21 @@ export const getMainBaseQuery = (): BaseQueryFn<IQueryArgs> => async (args) => {
       };
     }
 
+    if (error instanceof ForbiddenError) {
+      window.location.assign(
+        `${authFrontendUrl}?${qs.stringify({
+          redirectFrom: window.location.href,
+        })}`,
+      );
+
+      return {
+        error: '',
+      };
+    }
+
     if (error instanceof RedirectError) {
+      window.location.assign(error.data.location);
+
       return {
         error: '',
       };

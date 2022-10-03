@@ -33,6 +33,12 @@ export class ConfigGetter {
       : 'https://admin.esenin-family.ru';
   }
 
+  public getAuthBackendDomainWithScheme(): string {
+    return this.envGetter.isDev()
+      ? 'http://localhost:3003'
+      : 'https://auth.esenin-family.ru';
+  }
+
   public getRootDomain(): string {
     return this.envGetter.isDev() ? 'localhost' : 'esenin-family.ru';
   }

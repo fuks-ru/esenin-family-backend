@@ -12,6 +12,8 @@ import { ApiOkResponse, ApiOperation } from '@nestjs/swagger';
 import { Pub } from 'backend/Pub/entities/Pub';
 import { PubService } from 'backend/Pub/services/PubService';
 import { PubUpdateRequest } from 'backend/Pub/dto/PubUpdateRequest';
+import { Public } from 'backend/Auth/decorators/Public';
+import { Roles } from 'backend/Auth/decorators/Roles';
 
 @Controller('pub')
 export class PubController {
@@ -25,6 +27,7 @@ export class PubController {
     type: Pub,
     isArray: true,
   })
+  @Public()
   public list(): Promise<Pub[]> {
     return this.pubService.getAll();
   }
@@ -36,6 +39,7 @@ export class PubController {
   @ApiOkResponse({
     type: Pub,
   })
+  @Public()
   public get(@Param('id') id: string): Promise<Pub> {
     return this.pubService.getById(id);
   }
@@ -47,6 +51,7 @@ export class PubController {
   @ApiOkResponse({
     type: Pub,
   })
+  @Roles('moderator', 'admin')
   public update(
     @Body() body: PubUpdateRequest,
     @Param('id') id: string,
@@ -64,6 +69,7 @@ export class PubController {
     type: Pub,
   })
   @Post('/')
+  @Roles('moderator', 'admin')
   public add(@Body() body: Pub): Promise<Pub> {
     return this.pubService.add(body);
   }
@@ -72,6 +78,7 @@ export class PubController {
     operationId: 'pubDelete',
   })
   @Delete('/:id')
+  @Roles('moderator', 'admin')
   public delete(@Param('id') id: string): Promise<void> {
     return this.pubService.deleteById(id);
   }

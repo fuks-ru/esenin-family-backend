@@ -6,10 +6,12 @@ import { NestMinioModule } from 'nestjs-minio';
 import { ConfigGetter } from 'backend/Config/services/ConfigGetter';
 import { PubModule } from 'backend/Pub/PubModule';
 import { ConfigModule } from 'backend/Config/ConfigModule';
+import { AuthModule } from 'backend/Auth/AuthModule';
 
 @Module({
   imports: [
     ConfigModule,
+    AuthModule,
     CommonModule.forRootAsync({
       inject: [ConfigGetter],
       useFactory: (configGetter: ConfigGetter) => ({
