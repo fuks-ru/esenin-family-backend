@@ -3,16 +3,17 @@
   "version": "0.0.1",
   "packageManager": "yarn@3.2.3",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development ts-node-dev -r tsconfig-paths/register --transpile-only --inspect=0.0.0.0:5003 ./src/main.ts",
+    "dev": "cross-env NODE_ENV=development ts-node-dev -r tsconfig-paths/register --transpile-only --inspect=0.0.0.0:5001 ./src/main.ts",
     "build:lib": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register ./src/schemaBuilder.ts"
   },
   "main": "./dist/lib/index.js",
   "module": "./dist/lib/index.js",
   "types": "./dist/lib/index.d.ts",
   "devDependencies": {
-    "@fuks-ru/auth-backend": "portal:../../../../WebstormProjects/auth/entries/backend",
-    "@fuks-ru/common": "0.0.8",
-    "@fuks-ru/common-backend": "0.3.5",
+    "@fuks-ru/auth-client": "0.4.4",
+    "@fuks-ru/auth-module": "0.0.1",
+    "@fuks-ru/common": "0.0.9",
+    "@fuks-ru/common-backend": "0.3.7",
     "@nestjs/common": "^9.1.2",
     "@nestjs/core": "^9.1.2",
     "@nestjs/passport": "^9.0.0",

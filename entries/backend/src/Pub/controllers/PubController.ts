@@ -8,12 +8,11 @@ import {
   Post,
 } from '@nestjs/common';
 import { ApiOkResponse, ApiOperation } from '@nestjs/swagger';
+import { Public, Roles } from '@fuks-ru/auth-module';
 
 import { Pub } from 'backend/Pub/entities/Pub';
 import { PubService } from 'backend/Pub/services/PubService';
 import { PubUpdateRequest } from 'backend/Pub/dto/PubUpdateRequest';
-import { Public } from 'backend/Auth/decorators/Public';
-import { Roles } from 'backend/Auth/decorators/Roles';
 
 @Controller('pub')
 export class PubController {

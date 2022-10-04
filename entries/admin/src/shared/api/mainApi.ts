@@ -9,6 +9,7 @@ import {
   ForbiddenError,
   RedirectError,
   SystemError,
+  UnauthorizedError,
   ValidationError,
 } from '@fuks-ru/common';
 import { BaseQueryFn } from '@reduxjs/toolkit/query';
@@ -23,7 +24,7 @@ export let mainApi: Client;
 export const initMainApi = async (): Promise<void> => {
   mainApi = await getApi(backendUrl);
 
-  mainApi.defaults.headers.common.i18next = navigator.language;
+  mainApi.defaults.headers.common.i18next = 'ru-RU';
 };
 
 export type IQueryArgs<Method extends TMethods = TMethods> = {
@@ -50,7 +51,7 @@ export const getMainBaseQuery = (): BaseQueryFn<IQueryArgs> => async (args) => {
       };
     }
 
-    if (error instanceof ForbiddenError) {
+    if (error instanceof ForbiddenError || error instanceof UnauthorizedError) {
       window.location.assign(
         `${authFrontendUrl}?${qs.stringify({
           redirectFrom: window.location.href,
