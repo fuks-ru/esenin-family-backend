@@ -155,7 +155,7 @@ jobs:
           username: ${{ secrets.SSH_NODE_USERNAME }}
           key: ${{ secrets.SSH_NODE_PRIVATE_KEY }}
           script: |
-            docker run --name ${{ env.POSTGRES_CONTAINER }} \
+            docker run --name esenin-family-postgres \
             --rm -d \
             -e POSTGRES_PASSWORD="${{ secrets.POSTGRES_PASSWORD }}" \
             -e POSTGRES_USER="${{ secrets.POSTGRES_USER }}" \
