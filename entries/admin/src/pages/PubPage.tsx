@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { Schemas } from '@fuks-ru/esenin-family-backend';
+import { Schemas } from '@fuks-ru/esenin-family-client';
 
 import { usePubTableData } from 'admin/entities/pub/model/usePubTableData';
 import { Table } from 'admin/shared/ui/Table';

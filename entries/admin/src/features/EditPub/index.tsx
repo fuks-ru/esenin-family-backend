@@ -1,4 +1,4 @@
-import { Schemas } from '@fuks-ru/esenin-family-backend';
+import { Schemas } from '@fuks-ru/esenin-family-client';
 import { FC, useEffect } from 'react';
 import { Form, Input, Modal } from 'antd';
 import { useForm } from 'antd/es/form/Form';

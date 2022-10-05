@@ -4,7 +4,7 @@ import {
   TApiArgs,
   TApiBody,
   TMethods,
-} from '@fuks-ru/esenin-family-backend';
+} from '@fuks-ru/esenin-family-client';
 import {
   ForbiddenError,
   RedirectError,

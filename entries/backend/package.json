@@ -1,10 +1,16 @@
 {
-  "name": "@fuks-ru/esenin-family-backend",
+  "name": "@fuks-ru/esenin-family-client",
   "version": "0.0.1",
   "packageManager": "yarn@3.2.3",
   "scripts": {
     "dev": "cross-env NODE_ENV=development ts-node-dev -r tsconfig-paths/register --transpile-only --inspect=0.0.0.0:5001 ./src/main.ts",
-    "build:lib": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register ./src/schemaBuilder.ts"
+    "build:lib": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register ./src/schemaBuilder.ts",
+    "build": "ttsc --project tsconfig.build.json",
+    "prod": "cross-env NODE_ENV=production node ./dist/build/main.js",
+    "dev:migration:generate": "cross-env NODE_ENV=development bash ./.bin/generate-migration.sh",
+    "prod:migration:run": "cross-env NODE_ENV=production yarn prod:typeorm migration:run",
+    "dev:typeorm": "cross-env NODE_ENV=development node -r ts-node/register/transpile-only -r tsconfig-paths/register $(yarn bin typeorm) -d ./src/Config/utils/ormconfig.ts",
+    "prod:typeorm": "cross-env NODE_ENV=production node $(yarn bin typeorm) -d ./dist/build/Config/utils/ormconfig.js"
   },
   "main": "./dist/lib/index.js",
   "module": "./dist/lib/index.js",
@@ -17,10 +23,10 @@
     "@fuks-ru/common": "*"
   },
   "devDependencies": {
-    "@fuks-ru/auth-client": "0.4.5",
-    "@fuks-ru/auth-module": "0.0.5",
+    "@fuks-ru/auth-client": "0.4.6",
+    "@fuks-ru/auth-module": "0.0.6",
     "@fuks-ru/common": "0.0.9",
-    "@fuks-ru/common-backend": "0.3.7",
+    "@fuks-ru/common-backend": "0.4.3",
     "@nestjs/common": "^9.1.2",
     "@nestjs/core": "^9.1.2",
     "@nestjs/platform-express": "^9.1.2",

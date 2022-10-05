@@ -15,7 +15,7 @@ export const ImageView: FC<IProps> = ({ value, percent }) => {
   return value ? (
     <img
       style={{ width: '100%' }}
-      src={`http://localhost:2000/static/esenin/${value}`}
+      src={`http://localhost:2000/static/${value}`}
       alt='logo'
     />
   ) : (

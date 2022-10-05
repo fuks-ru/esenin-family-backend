@@ -3,7 +3,7 @@ import {
   TApiArgs,
   TApiBody,
   TApiResponse,
-} from '@fuks-ru/esenin-family-backend';
+} from '@fuks-ru/esenin-family-client';
 
 import { getMainBaseQuery } from 'admin/shared/api';
 

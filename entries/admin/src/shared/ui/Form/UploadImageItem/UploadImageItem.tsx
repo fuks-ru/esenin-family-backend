@@ -41,7 +41,7 @@ export const UploadImageItem: FC<IProps> = ({ initialValue, name, label }) => {
     <Form.Item name={name} label={label} getValueFromEvent={onUpload}>
       <Upload.Dragger
         name='file'
-        action='http://localhost:2000/upload/esenin'
+        action='http://localhost:2000/upload'
         showUploadList={false}
         withCredentials={true}
       >

@@ -11,7 +11,10 @@
   ],
   "scripts": {
     "dev": "yarn workspaces foreach --interlaced --verbose --jobs=unlimited --parallel run dev",
-    "build:lib": "yarn workspaces foreach --interlaced --verbose --jobs=unlimited --parallel run build:lib",
+    "prod": "yarn workspaces foreach --interlaced --verbose --jobs=unlimited --parallel run prod",
+    "build": "yarn workspaces foreach --interlaced --verbose --topological-dev --parallel run build",
+    "build:lib": "yarn workspaces foreach --interlaced --verbose --topological-dev --parallel run build:lib",
+    "prod:migration:run": "yarn workspaces foreach --interlaced --verbose --parallel run prod:migration:run",
     "lint": "eslint \"{**/*,*}.{ts,tsx,js,jsx,json}\"",
     "lint:fix": "yarn run lint --fix"
   },

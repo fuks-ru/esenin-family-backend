@@ -2,6 +2,7 @@
   "name": "@fuks-ru/esenin-family-admin",
   "packageManager": "yarn@3.2.3",
   "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack serve --mode development"
   },
   "devDependencies": {
@@ -13,7 +14,7 @@
     "@babel/preset-typescript": "^7.18.6",
     "@fuks-ru/common": "0.0.9",
     "@fuks-ru/common-frontend": "0.0.6",
-    "@fuks-ru/esenin-family-backend": "workspace:0.0.1",
+    "@fuks-ru/esenin-family-client": "workspace:0.0.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@reduxjs/toolkit": "^1.8.5",
     "@svgr/webpack": "^6.3.1",

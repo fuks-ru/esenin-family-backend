@@ -1,5 +1,5 @@
 import { ColumnsType } from 'antd/es/table';
-import { Schemas } from '@fuks-ru/esenin-family-backend';
+import { Schemas } from '@fuks-ru/esenin-family-client';
 
 import { pubApi } from 'admin/entities/pub';
 

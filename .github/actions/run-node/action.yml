@@ -1,0 +1,33 @@
+name: 'Run node container'
+description: 'Run node container'
+inputs:
+  script:
+    description: 'Script for run'
+    required: true
+  detached:
+    description: 'Detached docker mode'
+    required: false
+  secret-context:
+    description: 'Secret params'
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Run node script
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ fromJson(inputs.secret-context).SSH_HOST }}
+        username: ${{ fromJson(inputs.secret-context).SSH_NODE_USERNAME }}
+        key: ${{ fromJson(inputs.secret-context).SSH_NODE_PRIVATE_KEY }}
+        script: |
+          docker run --name esenin-family-backend \
+          --rm ${{ inputs.detached && '-d' }} \
+          -e POSTGRES_PASSWORD="${{ fromJson(inputs.secret-context).POSTGRES_PASSWORD }}" \
+          -e POSTGRES_USER="${{ fromJson(inputs.secret-context).POSTGRES_USER }}" \
+          -e POSTGRES_HOST="esenin-family-postgres" \
+          -e PERSONAL_NPM_TOKEN="${{ fromJson(inputs.secret-context).PERSONAL_NPM_TOKEN }}" \
+          -v "/server/esenin-family-backend/backend/var":/app/entries/backend/var \
+          --network="fuks-ru" \
+          difuks/esenin-family-backend \
+          ${{ inputs.script }}
