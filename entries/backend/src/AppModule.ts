@@ -1,7 +1,6 @@
 import { CommonModule } from '@fuks-ru/common-backend';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { NestMinioModule } from 'nestjs-minio';
 import { AuthModule } from '@fuks-ru/auth-module';
 
 import { ConfigGetter } from 'backend/Config/services/ConfigGetter';
@@ -29,10 +28,6 @@ import { ConfigModule } from 'backend/Config/ConfigModule';
       inject: [ConfigGetter],
       useFactory: (configGetter: ConfigGetter) =>
         configGetter.getTypeOrmConfig(),
-    }),
-    NestMinioModule.registerAsync({
-      inject: [ConfigGetter],
-      useFactory: (configGetter: ConfigGetter) => configGetter.getMinioConfig(),
     }),
     PubModule,
   ],

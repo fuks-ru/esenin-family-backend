@@ -9,14 +9,20 @@
   "main": "./dist/lib/index.js",
   "module": "./dist/lib/index.js",
   "types": "./dist/lib/index.d.ts",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "openapi-client-axios": "^5.1.2"
+  },
+  "peerDependencies": {
+    "@fuks-ru/common": "*"
+  },
   "devDependencies": {
-    "@fuks-ru/auth-client": "0.4.4",
-    "@fuks-ru/auth-module": "0.0.1",
+    "@fuks-ru/auth-client": "0.4.5",
+    "@fuks-ru/auth-module": "0.0.5",
     "@fuks-ru/common": "0.0.9",
     "@fuks-ru/common-backend": "0.3.7",
     "@nestjs/common": "^9.1.2",
     "@nestjs/core": "^9.1.2",
-    "@nestjs/passport": "^9.0.0",
     "@nestjs/platform-express": "^9.1.2",
     "@nestjs/swagger": "^6.1.2",
     "@nestjs/typeorm": "^9.0.1",
@@ -29,11 +35,8 @@
     "cross-env": "^7.0.3",
     "express": "^4.18.1",
     "nestjs-i18n": "^9.1.10",
-    "nestjs-minio": "^2.2.1",
     "openapi-client-axios": "^5.3.0",
     "openapi-client-axios-typegen": "^5.3.0",
-    "passport": "^0.6.0",
-    "passport-custom": "^1.1.1",
     "pg": "^8.8.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.5.7",
@@ -45,10 +48,5 @@
     "typeorm": "^0.3.10",
     "typescript": "4.8.3",
     "typescript-transform-paths": "^3.3.1"
-  },
-  "peerDependencies": {
-    "@fuks-ru/common": "*",
-    "axios": "^0.27.2",
-    "openapi-client-axios": "^5.1.2"
   }
 }

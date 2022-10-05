@@ -3,7 +3,6 @@ import { HttpStatus, Injectable } from '@nestjs/common';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import * as path from 'node:path';
 import * as process from 'node:process';
-import { NestMinioOptions } from 'nestjs-minio';
 
 import { ormConfig } from 'backend/Config/utils/ormconfig';
 import { ErrorCode } from 'backend/Config/enums/ErrorCode';
@@ -47,16 +46,6 @@ export class ConfigGetter {
     return this.envGetter.isDev()
       ? this.getDevTypeOrmConfig()
       : this.getProdTypeOrmConfig();
-  }
-
-  public getMinioConfig(): NestMinioOptions {
-    return {
-      endPoint: 'localhost',
-      port: 9_000,
-      useSsl: false,
-      accessKey: 'minio99',
-      secretKey: 'minio123',
-    };
   }
 
   private getProdTypeOrmConfig(): TypeOrmModuleOptions {

@@ -43,6 +43,7 @@ export const UploadImageItem: FC<IProps> = ({ initialValue, name, label }) => {
         name='file'
         action='http://localhost:2000/upload/esenin'
         showUploadList={false}
+        withCredentials={true}
       >
         <ImageView percent={percent} value={value} />
       </Upload.Dragger>
