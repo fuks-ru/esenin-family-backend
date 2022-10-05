@@ -2,6 +2,7 @@
   "name": "@fuks-ru/esenin-family-client",
   "version": "0.0.1",
   "packageManager": "yarn@3.2.3",
+  "repository": "https://github.com/fuks-ru/esenin-family-backend",
   "scripts": {
     "dev": "cross-env NODE_ENV=development ts-node-dev -r tsconfig-paths/register --transpile-only --inspect=0.0.0.0:5001 ./src/main.ts",
     "build:lib": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register ./src/schemaBuilder.ts",
@@ -21,6 +22,9 @@
   },
   "peerDependencies": {
     "@fuks-ru/common": "*"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "devDependencies": {
     "@fuks-ru/auth-client": "0.4.6",
