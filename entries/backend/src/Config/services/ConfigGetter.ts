@@ -23,7 +23,7 @@ export class ConfigGetter {
   }
 
   public getApiPrefix(): string {
-    return '/mainApi';
+    return '/api';
   }
 
   public getAdminDomainWithScheme(): string {
