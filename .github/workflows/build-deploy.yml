@@ -126,6 +126,8 @@ jobs:
   deploy:
     name: Deploy
 
+    needs: [build, pull-containers]
+
     runs-on: ubuntu-latest
 
     steps:
