@@ -175,6 +175,7 @@ jobs:
         uses: ./.github/actions/run-node
         with:
           detached: true
+          secret-context: ${{ toJson(secrets) }}
           script: yarn prod
 
       - name: Sleep for wait node start
