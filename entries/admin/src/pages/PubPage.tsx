@@ -3,13 +3,16 @@ import { Schemas } from '@fuks-ru/esenin-family-client';
 
 import { usePubTableData } from 'admin/entities/pub/model/usePubTableData';
 import { Table } from 'admin/shared/ui/Table';
-import { pubApi } from 'admin/entities/pub';
-import { EditPub } from 'admin/features/EditPub';
+import { pubApi, pubFormDataTypes } from 'admin/entities/pub';
+import { EditModal } from 'admin/shared/ui/EditModal';
 
 export const PubPage: FC = () => {
   const { columns, dataSource } = usePubTableData();
   const [deletePub] = pubApi.useDeleteMutation();
   const [activePub, setActivePub] = useState<Schemas.Pub | null>(null);
+  const [isOpenAdd, setIsOpenAdd] = useState<boolean>(false);
+  const [update, updateResult] = pubApi.useUpdateMutation();
+  const [add, addResult] = pubApi.useAddMutation();
 
   return (
     <>
@@ -22,9 +25,28 @@ export const PubPage: FC = () => {
         onDetail={(record) => {
           setActivePub(record);
         }}
+        onAdd={() => {
+          setIsOpenAdd(true);
+        }}
       />
       {activePub && (
-        <EditPub pub={activePub} onCancel={() => setActivePub(null)} />
+        <EditModal
+          initialData={activePub}
+          title={activePub.name}
+          dataTypes={pubFormDataTypes}
+          onSave={update}
+          onClose={() => setActivePub(null)}
+          {...updateResult}
+        />
+      )}
+      {isOpenAdd && (
+        <EditModal
+          title='Добавление бара'
+          dataTypes={pubFormDataTypes}
+          onSave={add}
+          onClose={() => setIsOpenAdd(false)}
+          {...addResult}
+        />
       )}
     </>
   );

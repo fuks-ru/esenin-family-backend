@@ -33,48 +33,76 @@ export type IQueryArgs<Method extends TMethods = TMethods> = {
   body?: TApiBody<Method>;
 };
 
-export const getMainBaseQuery = (): BaseQueryFn<IQueryArgs> => async (args) => {
-  const method = mainApi[args.method].bind(mainApi);
+export interface IResponseError {
+  message: string;
+  validation?: { [key: string]: string[] };
+}
 
-  try {
-    const response = await method(args.params, args.body);
+export const getMainBaseQuery =
+  (): BaseQueryFn<IQueryArgs, unknown, IResponseError> => async (args) => {
+    const method = mainApi[args.method].bind(mainApi);
 
-    return {
-      data: response.data,
-    };
-  } catch (error) {
-    if (error instanceof ValidationError || error instanceof SystemError) {
-      await message.error(error.message);
-
-      return {
-        error: error.message,
-      };
-    }
-
-    if (error instanceof ForbiddenError || error instanceof UnauthorizedError) {
-      window.location.assign(
-        `${authFrontendUrl}?${qs.stringify({
-          redirectFrom: window.location.href,
-        })}`,
-      );
+    try {
+      const response = await method(args.params, args.body);
 
       return {
-        error: '',
+        data: response.data,
       };
-    }
+    } catch (error) {
+      if (error instanceof ValidationError) {
+        void message.error(error.message);
 
-    if (error instanceof RedirectError) {
-      window.location.assign(error.data.location);
+        return {
+          error: {
+            message: error.message,
+            validation: error.data,
+          },
+        };
+      }
+
+      if (error instanceof SystemError) {
+        void message.error(error.message);
+
+        return {
+          error: {
+            message: error.message,
+          },
+        };
+      }
+
+      if (
+        error instanceof ForbiddenError ||
+        error instanceof UnauthorizedError
+      ) {
+        window.location.assign(
+          `${authFrontendUrl}?${qs.stringify({
+            redirectFrom: window.location.href,
+          })}`,
+        );
+
+        return {
+          error: {
+            message: error.message,
+          },
+        };
+      }
+
+      if (error instanceof RedirectError) {
+        window.location.assign(error.data.location);
+
+        return {
+          error: {
+            message: error.message,
+          },
+        };
+      }
+
+      void message.error('Неизвестная ошибка');
 
       return {
-        error: '',
+        error: {
+          message: 'Неизвестная ошибка',
+        },
       };
     }
-
-    await message.error('Неизвестная ошибка');
-
-    return {
-      error: 'Неизвестная ошибка',
-    };
-  }
-};
+  };

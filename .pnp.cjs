@@ -3021,6 +3021,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:18.0.21"],\
             ["@types/react-dom", "npm:18.0.6"],\
             ["@types/styled-components", "npm:5.1.26"],\
+            ["@types/uuid", "npm:8.3.4"],\
             ["@types/webpack", "npm:5.28.0"],\
             ["antd", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:4.23.4"],\
             ["babel-loader", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:8.2.5"],\
@@ -3032,6 +3033,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mini-css-extract-plugin", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:2.6.1"],\
             ["node-polyfill-webpack-plugin", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:2.0.1"],\
             ["qs", "npm:6.11.0"],\
+            ["rc-field-form", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:1.27.2"],\
             ["rc-util", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:5.24.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:18.2.0"],\
@@ -3044,6 +3046,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tsconfig-paths", "npm:4.1.0"],\
             ["tsconfig-paths-webpack-plugin", "npm:4.0.0"],\
             ["typescript", "patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"],\
+            ["uuid", "npm:9.0.0"],\
             ["webpack", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:5.74.0"],\
             ["webpack-cli", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:4.10.0"],\
             ["webpack-dev-server", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:4.11.1"]\
@@ -4859,6 +4862,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/uuid", [\
+        ["npm:8.3.4", {\
+          "packageLocation": "./.yarn/cache/@types-uuid-npm-8.3.4-7547f4402c-6f11f3ff70.zip/node_modules/@types/uuid/",\
+          "packageDependencies": [\
+            ["@types/uuid", "npm:8.3.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/webpack", [\
         ["npm:5.28.0", {\
           "packageLocation": "./.yarn/cache/@types-webpack-npm-5.28.0-0dc39cc4ef-a038d7e12d.zip/node_modules/@types/webpack/",\
@@ -5640,7 +5652,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rc-dialog", "virtual:c3d284551112703d18931fdba1ee0bd8867eca75ae579d33f0e04796cb70cd45ba6409e7d114282bc6852239641eab638ddb20684bba5462132c952a011ec8bd#npm:8.9.0"],\
             ["rc-drawer", "virtual:c3d284551112703d18931fdba1ee0bd8867eca75ae579d33f0e04796cb70cd45ba6409e7d114282bc6852239641eab638ddb20684bba5462132c952a011ec8bd#npm:5.1.0"],\
             ["rc-dropdown", "virtual:c3d284551112703d18931fdba1ee0bd8867eca75ae579d33f0e04796cb70cd45ba6409e7d114282bc6852239641eab638ddb20684bba5462132c952a011ec8bd#npm:4.0.1"],\
-            ["rc-field-form", "virtual:c3d284551112703d18931fdba1ee0bd8867eca75ae579d33f0e04796cb70cd45ba6409e7d114282bc6852239641eab638ddb20684bba5462132c952a011ec8bd#npm:1.27.2"],\
+            ["rc-field-form", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:1.27.2"],\
             ["rc-image", "virtual:c3d284551112703d18931fdba1ee0bd8867eca75ae579d33f0e04796cb70cd45ba6409e7d114282bc6852239641eab638ddb20684bba5462132c952a011ec8bd#npm:5.7.1"],\
             ["rc-input", "virtual:c3d284551112703d18931fdba1ee0bd8867eca75ae579d33f0e04796cb70cd45ba6409e7d114282bc6852239641eab638ddb20684bba5462132c952a011ec8bd#npm:0.1.2"],\
             ["rc-input-number", "virtual:c3d284551112703d18931fdba1ee0bd8867eca75ae579d33f0e04796cb70cd45ba6409e7d114282bc6852239641eab638ddb20684bba5462132c952a011ec8bd#npm:7.3.9"],\
@@ -13969,10 +13981,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:c3d284551112703d18931fdba1ee0bd8867eca75ae579d33f0e04796cb70cd45ba6409e7d114282bc6852239641eab638ddb20684bba5462132c952a011ec8bd#npm:1.27.2", {\
-          "packageLocation": "./.yarn/__virtual__/rc-field-form-virtual-b6ffb69a8b/0/cache/rc-field-form-npm-1.27.2-949a411f8c-4eec1b5e49.zip/node_modules/rc-field-form/",\
+        ["virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:1.27.2", {\
+          "packageLocation": "./.yarn/__virtual__/rc-field-form-virtual-1ff4b69c02/0/cache/rc-field-form-npm-1.27.2-949a411f8c-4eec1b5e49.zip/node_modules/rc-field-form/",\
           "packageDependencies": [\
-            ["rc-field-form", "virtual:c3d284551112703d18931fdba1ee0bd8867eca75ae579d33f0e04796cb70cd45ba6409e7d114282bc6852239641eab638ddb20684bba5462132c952a011ec8bd#npm:1.27.2"],\
+            ["rc-field-form", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:1.27.2"],\
             ["@babel/runtime", "npm:7.19.0"],\
             ["@types/react", "npm:18.0.21"],\
             ["@types/react-dom", "npm:18.0.6"],\

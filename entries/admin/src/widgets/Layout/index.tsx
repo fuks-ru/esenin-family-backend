@@ -66,6 +66,7 @@ const SContentWrapper = styled(LayoutBase)`
 
 const SContent = styled(Content)`
   background: #ffffff;
+  padding: 16px;
 `;
 
 const SLogo = styled(EseninLogo)`

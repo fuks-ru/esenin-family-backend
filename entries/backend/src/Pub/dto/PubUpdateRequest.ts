@@ -1,12 +1,16 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsString } from 'class-validator';
+import { IsNotEmpty } from 'class-validator';
 
 export class PubUpdateRequest {
   @ApiProperty()
-  @IsString()
+  @IsNotEmpty({
+    message: 'Название не должно быть пустым.',
+  })
   public name!: string;
 
   @ApiProperty()
-  @IsString()
+  @IsNotEmpty({
+    message: 'Лого не должно быть пустым.',
+  })
   public logo!: string;
 }

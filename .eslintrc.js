@@ -21,6 +21,7 @@ module.exports = {
   rules: {
     'jsdoc/require-jsdoc': ['off'],
     'i18next/no-literal-string': ['off'],
+    'react/jsx-props-no-spreading': ['off'],
   },
   overrides: [
     {

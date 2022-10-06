@@ -3,6 +3,7 @@ import { UploadChangeParam } from 'antd/es/upload';
 import { FC, useState } from 'react';
 
 import { ImageView } from 'admin/shared/ui/Form/UploadImageItem/ImageView';
+import { bucketUrl } from 'admin/shared/config';
 
 interface IProps {
   initialValue: string | undefined;
@@ -41,7 +42,7 @@ export const UploadImageItem: FC<IProps> = ({ initialValue, name, label }) => {
     <Form.Item name={name} label={label} getValueFromEvent={onUpload}>
       <Upload.Dragger
         name='file'
-        action='http://localhost:2000/upload'
+        action={`${bucketUrl}/static-bucket/upload`}
         showUploadList={false}
         withCredentials={true}
       >
