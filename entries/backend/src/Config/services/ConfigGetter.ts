@@ -39,9 +39,7 @@ export class ConfigGetter {
   }
 
   public getCookieDomain(): string {
-    return this.envGetter.isDev()
-      ? 'localhost'
-      : `.${this.envGetter.getEnv('DOMAIN')}`;
+    return this.envGetter.isDev() ? 'localhost' : '.esenin-family.ru';
   }
 
   public getTypeOrmConfig(): TypeOrmModuleOptions {
