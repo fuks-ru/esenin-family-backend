@@ -19,7 +19,7 @@ import { ConfigModule } from 'backend/Config/ConfigModule';
     CommonModule.forRootAsync({
       inject: [ConfigGetter],
       useFactory: (configGetter: ConfigGetter) => ({
-        domain: configGetter.getRootDomain(),
+        sessionCookieDomain: configGetter.getCookieDomain(),
         apiPrefix: configGetter.getApiPrefix(),
         statusResolver: configGetter.statusResolver,
       }),

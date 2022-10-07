@@ -38,8 +38,10 @@ export class ConfigGetter {
       : 'https://auth.esenin-family.ru';
   }
 
-  public getRootDomain(): string {
-    return this.envGetter.isDev() ? 'localhost' : 'esenin-family.ru';
+  public getCookieDomain(): string {
+    return this.envGetter.isDev()
+      ? 'localhost'
+      : `.${this.envGetter.getEnv('DOMAIN')}`;
   }
 
   public getTypeOrmConfig(): TypeOrmModuleOptions {
