@@ -2,7 +2,7 @@ import { PlusOutlined } from '@ant-design/icons';
 import { Progress, Space, Typography } from 'antd';
 import { FC } from 'react';
 
-import { bucketUrl } from 'admin/shared/config';
+import { bucketShowUrl } from 'admin/shared/config';
 
 interface IProps {
   percent: number | null;
@@ -17,7 +17,7 @@ export const ImageView: FC<IProps> = ({ value, percent }) => {
   return value ? (
     <img
       style={{ width: '100%' }}
-      src={`${bucketUrl}/static-bucket/files/${value}`}
+      src={`${bucketShowUrl}/${value}`}
       alt='logo'
     />
   ) : (

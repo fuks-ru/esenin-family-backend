@@ -6,9 +6,13 @@ export const backendUrl = isDevelopment
   ? 'http://localhost:3001'
   : 'https://esenin-family.ru';
 
-export const bucketUrl = isDevelopment
-  ? 'http://localhost:2000'
-  : 'https://minio.esenin-family.ru';
+export const bucketUploadUrl = isDevelopment
+  ? 'http://localhost:2000/upload'
+  : 'https://minio.esenin-family.ru/upload';
+
+export const bucketShowUrl = isDevelopment
+  ? 'http://localhost:9000/dev-bucket'
+  : 'https://minio.esenin-family.ru/esenin-family';
 
 export const authFrontendUrl = isDevelopment
   ? 'http://localhost:3002'

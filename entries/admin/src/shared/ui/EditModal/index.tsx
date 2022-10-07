@@ -1,12 +1,12 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { Form, Input, Modal } from 'antd';
 import { useForm } from 'antd/es/form/Form';
 import { Store } from 'rc-field-form/es/interface';
 import { SerializedError } from '@reduxjs/toolkit';
 import { v4 } from 'uuid';
 
-import { UploadImageItem } from 'admin/shared/ui/Form';
 import { IResponseError } from 'admin/shared/api/mainApi';
+import { UploadImage } from 'admin/shared/ui/UploadImage';
 
 export interface IFormDataType<Data extends { id: string }> {
   dataIndex: keyof Data;
@@ -18,32 +18,24 @@ interface IProps<Data extends Store & { id: string }> {
   initialData?: Data;
   dataTypes: Array<IFormDataType<Data>>;
   onClose: () => void;
-  onSave: (data: Data) => void;
+  onSave: (
+    data: Data,
+  ) => Promise<{ data: Data } | { error: SerializedError | IResponseError }>;
   isLoading: boolean;
-  isSuccess: boolean;
   title: string;
-  error?: IResponseError | SerializedError;
 }
 export const EditModal = <Data extends Store & { id: string }>({
   onSave,
   initialData,
   dataTypes,
   title,
-  isSuccess,
   isLoading,
   onClose,
-  error,
 }: IProps<Data>): JSX.Element => {
   const [form] = useForm<Data>();
 
-  useEffect(() => {
-    if (isSuccess) {
-      onClose();
-    }
-  }, [isSuccess, onClose]);
-
   const handleFinish = useCallback(
-    (data: Data) => {
+    async (data: Data) => {
       form.setFields(
         Object.keys(data).map((name) => ({
           name,
@@ -51,21 +43,27 @@ export const EditModal = <Data extends Store & { id: string }>({
         })),
       );
 
-      onSave(data);
-    },
-    [form, onSave],
-  );
+      const result = await onSave(data);
 
-  useEffect(() => {
-    if (error && 'validation' in error && error.validation) {
-      form.setFields(
-        Object.entries(error.validation).map(([name, errors]) => ({
-          name,
-          errors,
-        })),
-      );
-    }
-  }, [error, form]);
+      if (
+        'error' in result &&
+        'validation' in result.error &&
+        result.error.validation
+      ) {
+        form.setFields(
+          Object.entries(result.error.validation).map(([name, errors]) => ({
+            name,
+            errors,
+          })),
+        );
+
+        return;
+      }
+
+      onClose();
+    },
+    [form, onClose, onSave],
+  );
 
   return (
     <Modal
@@ -97,12 +95,9 @@ export const EditModal = <Data extends Store & { id: string }>({
           switch (data.type) {
             case 'image':
               return (
-                <UploadImageItem
-                  label={data.label}
-                  name={dataIndex}
-                  initialValue={initialData?.[dataIndex] as string}
-                  key={dataIndex}
-                />
+                <Form.Item name={dataIndex} label={data.label} key={dataIndex}>
+                  <UploadImage />
+                </Form.Item>
               );
             // eslint-disable-next-line unicorn/no-useless-switch-case
             case 'text':

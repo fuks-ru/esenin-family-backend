@@ -74,7 +74,7 @@ export const pubApi = createApi({
       onQueryStarted: async (id, { dispatch, queryFulfilled }) => {
         const addResult = dispatch(
           pubApi.util.updateQueryData('getList', undefined, (draft) =>
-            draft.filter((item) => item.id === id),
+            draft.filter((item) => item.id !== id),
           ),
         );
 

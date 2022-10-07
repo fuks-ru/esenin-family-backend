@@ -1,7 +1,7 @@
 import { Button, Space, Table as TableBase, TableProps } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 import { ReactElement, useMemo } from 'react';
-import { DeleteOutlined, EyeOutlined, PlusOutlined } from '@ant-design/icons';
+import { DeleteOutlined, EditOutlined, PlusOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 
 interface IProps<RecordType extends object>
@@ -42,7 +42,7 @@ export const Table = <RecordType extends object>({
                 onClick={() => {
                   void onDetail(record);
                 }}
-                icon={<EyeOutlined />}
+                icon={<EditOutlined />}
               />
             )}
             {onDelete && (
