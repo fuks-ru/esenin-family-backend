@@ -9,7 +9,9 @@ interface IResult {
   dataSource: Array<Schemas.UserResponse & { key: string }>;
 }
 
-const columns: ColumnsType<Schemas.UserResponse> = [
+const getColumns = (
+  roles: IEnumOption[],
+): ColumnsType<Schemas.UserResponse> => [
   {
     title: 'Email',
     dataIndex: 'email',
@@ -17,22 +19,21 @@ const columns: ColumnsType<Schemas.UserResponse> = [
   {
     title: 'Роль',
     dataIndex: 'role',
+    render: (value: string) => {
+      const role = roles.find((item) => item.value === value);
+
+      return role?.label || value;
+    },
   },
 ];
 
 export const useUserTableData = (roles: IEnumOption[]): IResult => {
   const { data = [] } = userApi.useGetListQuery();
 
-  const dataSource = data.map((item) => {
-    const roleValue = item.role;
-
-    const roleName = roles.find((role) => role.value === roleValue);
-
-    return { ...item, role: roleName?.label || roleValue, key: item.id };
-  });
+  const dataSource = data.map((item) => ({ ...item, key: item.id }));
 
   return {
-    columns,
+    columns: getColumns(roles),
     dataSource,
   };
 };
