@@ -2853,7 +2853,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@fuks-ru/common", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
             ["@types/openapi-client-axios", null],\
-            ["openapi-client-axios", null]\
+            ["openapi-client-axios", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:5.3.0"]\
           ],\
           "packagePeers": [\
             "@types/openapi-client-axios",\
@@ -3078,6 +3078,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["html-webpack-plugin", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:5.5.0"],\
             ["mini-css-extract-plugin", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:2.6.1"],\
             ["node-polyfill-webpack-plugin", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:2.0.1"],\
+            ["openapi-client-axios", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:5.3.0"],\
             ["qs", "npm:6.11.0"],\
             ["rc-field-form", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:1.27.2"],\
             ["rc-util", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:5.24.4"],\
@@ -12812,6 +12813,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/axios", null],\
             ["@types/js-yaml", null],\
             ["axios", "npm:0.27.2"],\
+            ["bath-es5", "npm:3.0.3"],\
+            ["copy-anything", "npm:3.0.2"],\
+            ["js-yaml", null],\
+            ["openapi-types", "npm:12.0.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/axios",\
+            "@types/js-yaml",\
+            "axios",\
+            "js-yaml"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:5.3.0", {\
+          "packageLocation": "./.yarn/__virtual__/openapi-client-axios-virtual-7d8df48a7d/0/cache/openapi-client-axios-npm-5.3.0-c69ce8681f-decf322b3f.zip/node_modules/openapi-client-axios/",\
+          "packageDependencies": [\
+            ["openapi-client-axios", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:5.3.0"],\
+            ["@apidevtools/json-schema-ref-parser", "npm:9.0.9"],\
+            ["@types/axios", null],\
+            ["@types/js-yaml", null],\
+            ["axios", null],\
             ["bath-es5", "npm:3.0.3"],\
             ["copy-anything", "npm:3.0.2"],\
             ["js-yaml", null],\
