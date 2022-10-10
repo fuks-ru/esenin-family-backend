@@ -1,20 +1,20 @@
-import { getApi, Client } from '@fuks-ru/esenin-family-client';
+import { getApi, Client } from '@fuks-ru/auth-client';
 import { getBaseQuery } from '@fuks-ru/common-frontend';
 import { message } from 'antd';
 import qs from 'qs';
 
-import { authFrontendUrl, backendUrl } from 'admin/shared/config';
+import { authBackendUrl, authFrontendUrl } from 'admin/shared/config';
 
-const getMainApi = async (): Promise<Client> => {
-  const mainApi = await getApi(backendUrl);
+const getAuthApi = async (): Promise<Client> => {
+  const authApi = await getApi(authBackendUrl);
 
-  mainApi.defaults.headers.common.i18next = 'ru-RU';
+  authApi.defaults.headers.common.i18next = 'ru-RU';
 
-  return mainApi;
+  return authApi;
 };
 
-export const mainBaseQuery = getBaseQuery({
-  getClient: getMainApi,
+export const authBaseQuery = getBaseQuery({
+  getClient: getAuthApi,
   onForbidden: () => {
     window.location.assign(
       `${authFrontendUrl}?${qs.stringify({

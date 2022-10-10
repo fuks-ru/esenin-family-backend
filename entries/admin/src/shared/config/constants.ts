@@ -17,3 +17,7 @@ export const bucketShowUrl = isDevelopment
 export const authFrontendUrl = isDevelopment
   ? 'http://localhost:3002'
   : 'https://auth.esenin-family.ru';
+
+export const authBackendUrl = isDevelopment
+  ? 'http://localhost:3003'
+  : 'https://auth.esenin-family.ru';

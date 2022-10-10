@@ -5,12 +5,12 @@ import { IFormDataType } from 'admin/shared/ui/EditModal';
 export const pubFormDataTypes: Array<IFormDataType<Schemas.Pub>> = [
   {
     dataIndex: 'name',
-    type: 'text',
+    field: { type: 'text' },
     label: 'Название',
   },
   {
     dataIndex: 'logo',
     label: 'Логотип',
-    type: 'image',
+    field: { type: 'image' },
   },
 ];

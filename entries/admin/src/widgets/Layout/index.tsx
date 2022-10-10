@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import { Menu, Layout as LayoutBase, Space } from 'antd';
 import { ItemType } from 'antd/es/menu/hooks/useItems';
-import { CoffeeOutlined, CopyOutlined } from '@ant-design/icons';
+import { CoffeeOutlined, CopyOutlined, UserOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -17,6 +17,12 @@ const menuItems: Array<ItemType & { route: string; key: string }> = [
     icon: <CoffeeOutlined />,
     label: <Link to={routes.pubs}>Бары</Link>,
     route: routes.pubs,
+  },
+  {
+    key: 'users',
+    icon: <UserOutlined />,
+    label: <Link to={routes.users}>Пользователи</Link>,
+    route: routes.users,
   },
   {
     key: 'posters',

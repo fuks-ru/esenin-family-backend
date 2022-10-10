@@ -1,17 +1,29 @@
 import { useCallback } from 'react';
-import { Form, Input, Modal } from 'antd';
+import { Form, Input, Modal, Select } from 'antd';
 import { useForm } from 'antd/es/form/Form';
 import { Store } from 'rc-field-form/es/interface';
 import { SerializedError } from '@reduxjs/toolkit';
 import { v4 } from 'uuid';
+import { IRtkResponseError } from '@fuks-ru/common-frontend';
 
-import { IResponseError } from 'admin/shared/api/mainApi';
 import { UploadImage } from 'admin/shared/ui/UploadImage';
+
+export interface IEnumOption {
+  label: string;
+  value: string;
+}
 
 export interface IFormDataType<Data extends { id: string }> {
   dataIndex: keyof Data;
   label?: string;
-  type?: 'text' | 'image';
+  field:
+    | {
+        type: 'text' | 'image';
+      }
+    | {
+        type: 'enum';
+        options: IEnumOption[];
+      };
 }
 
 interface IProps<Data extends Store & { id: string }> {
@@ -20,7 +32,7 @@ interface IProps<Data extends Store & { id: string }> {
   onClose: () => void;
   onSave: (
     data: Data,
-  ) => Promise<{ data: Data } | { error: SerializedError | IResponseError }>;
+  ) => Promise<{ data: Data } | { error: SerializedError | IRtkResponseError }>;
   isLoading: boolean;
   title: string;
 }
@@ -92,11 +104,17 @@ export const EditModal = <Data extends Store & { id: string }>({
         {dataTypes.map((data) => {
           const dataIndex = String(data.dataIndex);
 
-          switch (data.type) {
+          switch (data.field.type) {
             case 'image':
               return (
                 <Form.Item name={dataIndex} label={data.label} key={dataIndex}>
                   <UploadImage />
+                </Form.Item>
+              );
+            case 'enum':
+              return (
+                <Form.Item name={dataIndex} label={data.label} key={dataIndex}>
+                  <Select options={data.field.options} />
                 </Form.Item>
               );
             // eslint-disable-next-line unicorn/no-useless-switch-case

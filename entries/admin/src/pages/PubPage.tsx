@@ -1,9 +1,8 @@
 import { FC, useState } from 'react';
 import { Schemas } from '@fuks-ru/esenin-family-client';
 
-import { usePubTableData } from 'admin/entities/pub/model/usePubTableData';
+import { usePubTableData, pubApi, pubFormDataTypes } from 'admin/entities/pub';
 import { Table } from 'admin/shared/ui/Table';
-import { pubApi, pubFormDataTypes } from 'admin/entities/pub';
 import { EditModal } from 'admin/shared/ui/EditModal';
 
 export const PubPage: FC = () => {

@@ -1,25 +1,25 @@
-import { createApi } from '@reduxjs/toolkit/query/react';
-import {
-  TApiArgs,
-  TApiBody,
-  TApiResponse,
-} from '@fuks-ru/esenin-family-client';
+import { Schemas, Paths } from '@fuks-ru/esenin-family-client';
+import { createApi } from '@reduxjs/toolkit/dist/query/react';
 
-import { getMainBaseQuery } from 'admin/shared/api';
+import { mainBaseQuery } from 'admin/shared/api';
 
 export const pubApi = createApi({
+  baseQuery: mainBaseQuery,
   reducerPath: 'pub',
-  baseQuery: getMainBaseQuery(),
   endpoints: (builder) => ({
-    getList: builder.query<TApiResponse<'pubList'>, void>({
+    getList: builder.query<Schemas.Pub[], void>({
       query: () => ({
         method: 'pubList',
+        body: undefined,
+        params: {},
       }),
     }),
-    add: builder.mutation<TApiResponse<'pubAdd'>, TApiBody<'pubAdd'>>({
+
+    add: builder.mutation<Schemas.Pub, Schemas.Pub>({
       query: (body) => ({
         method: 'pubAdd',
         body,
+        params: {},
       }),
       onQueryStarted: async (body, { dispatch, queryFulfilled }) => {
         const addResult = dispatch(
@@ -35,9 +35,10 @@ export const pubApi = createApi({
         }
       },
     }),
+
     update: builder.mutation<
-      TApiResponse<'pubUpdate'>,
-      TApiBody<'pubUpdate'> & TApiArgs<'pubUpdate'>
+      Schemas.Pub,
+      Schemas.PubUpdateRequest & Paths.PubUpdate.PathParameters
     >({
       query: ({ id, ...body }) => ({
         method: 'pubUpdate',
@@ -64,12 +65,14 @@ export const pubApi = createApi({
         }
       },
     }),
+
     delete: builder.mutation<void, string>({
       query: (id) => ({
         method: 'pubDelete',
         params: {
           id,
         },
+        body: undefined,
       }),
       onQueryStarted: async (id, { dispatch, queryFulfilled }) => {
         const addResult = dispatch(

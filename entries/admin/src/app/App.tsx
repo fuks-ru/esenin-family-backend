@@ -8,6 +8,7 @@ import { AppProvider } from 'admin/app/providers';
 import { PosterPage } from 'admin/pages/PosterPage';
 import { Layout } from 'admin/widgets/Layout';
 import { useI18nRu } from 'admin/shared/lib';
+import { UserPage } from 'admin/pages/UserPage';
 
 export const App: FC = () => {
   useI18nRu();
@@ -16,6 +17,7 @@ export const App: FC = () => {
     <AppProvider Wrapper={Layout}>
       <Route path={routes.pubs} element={<PubPage />} />
       <Route path={routes.posters} element={<PosterPage />} />
+      <Route path={routes.users} element={<UserPage />} />
     </AppProvider>
   );
 };
