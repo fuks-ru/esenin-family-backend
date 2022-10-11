@@ -22,6 +22,11 @@ jobs:
       - name: Install modules
         run: yarn install
 
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.3.2'
+          channel: 'stable'
+
       - name: Build libs
         run: yarn build:lib
 
