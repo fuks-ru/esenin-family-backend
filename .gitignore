@@ -11,3 +11,4 @@ var
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+openapitools.json

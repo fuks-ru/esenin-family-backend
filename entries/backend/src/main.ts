@@ -19,7 +19,10 @@ import { ConfigGetter } from 'backend/Config/services/ConfigGetter';
   app.use(cookieParser());
   app.setGlobalPrefix(configGetter.getApiPrefix());
   app.enableCors({
-    origin: [configGetter.getAdminDomainWithScheme()],
+    origin: [
+      configGetter.getAdminDomainWithScheme(),
+      configGetter.getAppDomainWithScheme(),
+    ],
     credentials: true,
   });
   app.useLogger(logger);
@@ -33,4 +36,6 @@ import { ConfigGetter } from 'backend/Config/services/ConfigGetter';
   }
 
   await app.listen(configGetter.getApiPort());
+
+  logger.log(`App was started on port ${configGetter.getApiPort()}`, 'Main');
 })();

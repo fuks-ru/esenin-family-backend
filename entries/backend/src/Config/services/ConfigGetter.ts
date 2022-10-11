@@ -32,6 +32,12 @@ export class ConfigGetter {
       : 'https://admin.esenin-family.ru';
   }
 
+  public getAppDomainWithScheme(): string {
+    return this.envGetter.isDev()
+      ? 'http://localhost:49430'
+      : 'https://app.esenin-family.ru';
+  }
+
   public getAuthBackendDomainWithScheme(): string {
     return this.envGetter.isDev()
       ? 'http://localhost:3003'

@@ -22,6 +22,9 @@ import { ConfigModule } from 'backend/Config/ConfigModule';
         sessionCookieDomain: configGetter.getCookieDomain(),
         apiPrefix: configGetter.getApiPrefix(),
         statusResolver: configGetter.statusResolver,
+        swagger: {
+          generators: ['axios', 'dart'],
+        },
       }),
     }),
     TypeOrmModule.forRootAsync({
