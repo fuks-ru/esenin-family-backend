@@ -21,3 +21,5 @@ export const authFrontendUrl = isDevelopment
 export const authBackendUrl = isDevelopment
   ? 'http://localhost:3003'
   : 'https://auth.esenin-family.ru';
+
+export const rootDomain = isDevelopment ? 'localhost' : 'esenin-family.ru';
