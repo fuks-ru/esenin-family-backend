@@ -50,11 +50,10 @@ jobs:
         run: yarn workspaces foreach --include "@fuks-ru/esenin-family-client" --interlaced --verbose npm publish --tolerate-republish
 
       - name: Publish dart client
-        uses: sakebook/actions-flutter-pub-publisher@v1.4.1
+        uses: k-paxian/dart-package-publisher@master
         with:
-          credential: ${{ secrets.PUB_CREDENTIALS }}
-          skip_test: true
-          package_directory: './entries/backend/dist/client/dart'
+          credentialJson: ${{ secrets.PUB_CREDENTIALS }}
+          relativePath: './entries/backend/dist/client/dart'
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
