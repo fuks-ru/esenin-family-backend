@@ -8,7 +8,7 @@ export class PosterResponse {
   public name!: string;
 
   @ApiProperty()
-  public pub!: string;
+  public pubId!: string;
 
   @ApiProperty()
   public date!: string;

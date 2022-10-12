@@ -19,7 +19,7 @@ export const usePosterFormDataTypes = (
         field: { type: 'image' },
       },
       {
-        dataIndex: 'pub',
+        dataIndex: 'pubId',
         label: 'Бар',
         field: { type: 'enum', options: pubs },
       },

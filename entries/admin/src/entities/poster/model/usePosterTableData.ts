@@ -24,7 +24,7 @@ const getColumns = (
   },
   {
     title: 'Бар',
-    dataIndex: 'pub',
+    dataIndex: 'pubId',
     render: (value: string) => {
       const pub = pubs.find((item) => item.value === value);
 

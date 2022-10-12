@@ -1,3 +1,7 @@
+# 0.0.4
+
+Pass pubId instead of pub
+
 # 0.0.3
 
 Add posters api

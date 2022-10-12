@@ -4,7 +4,7 @@ export POSTGRES_PASSWORD="root"
 export DB_TYPE="postgres"
 
 docker run --name esenin-family-postgres \
-  --rm \
+  --rm -d \
   -e POSTGRES_PASSWORD="$POSTGRES_USER" \
   -e POSTGRES_USER="$POSTGRES_PASSWORD" \
   -e POSTGRES_DB=esenin \

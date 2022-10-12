@@ -1,4 +1,10 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 import { Pub } from 'backend/Pub/entities/Pub';
 import { dateTimeType } from 'backend/constants';
@@ -14,7 +20,11 @@ export class Poster {
   @ManyToOne(() => Pub, {
     onDelete: 'RESTRICT',
   })
+  @JoinColumn({ name: 'pubId' })
   public pub!: Pub;
+
+  @Column()
+  public pubId!: string;
 
   // https://github.com/typeorm/typeorm/issues/5820
   @Column({

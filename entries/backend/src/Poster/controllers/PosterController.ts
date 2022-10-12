@@ -29,13 +29,8 @@ export class PosterController {
     isArray: true,
   })
   @Public()
-  public async list(): Promise<PosterResponse[]> {
-    const posters = await this.posterService.getAll();
-
-    return posters.map((poster) => ({
-      ...poster,
-      pub: poster.pub.id,
-    }));
+  public list(): Promise<PosterResponse[]> {
+    return this.posterService.getAll();
   }
 
   @Get('/:id')
@@ -46,13 +41,8 @@ export class PosterController {
     type: PosterResponse,
   })
   @Public()
-  public async get(@Param('id') id: string): Promise<PosterResponse> {
-    const poster = await this.posterService.getById(id);
-
-    return {
-      ...poster,
-      pub: poster.pub.id,
-    };
+  public get(@Param('id') id: string): Promise<PosterResponse> {
+    return this.posterService.getById(id);
   }
 
   @Patch('/:id')
@@ -63,22 +53,14 @@ export class PosterController {
     type: PosterResponse,
   })
   @Roles('moderator', 'admin')
-  public async update(
+  public update(
     @Body() body: PosterUpdateRequest,
     @Param('id') id: string,
   ): Promise<PosterResponse> {
-    const poster = await this.posterService.save({
+    return this.posterService.save({
       ...body,
-      pub: {
-        id: body.pub,
-      },
       id,
     });
-
-    return {
-      ...poster,
-      pub: poster.pub.id,
-    };
   }
 
   @ApiOperation({
@@ -90,17 +72,7 @@ export class PosterController {
   @Post('/')
   @Roles('moderator', 'admin')
   public async add(@Body() body: PosterAddRequest): Promise<PosterResponse> {
-    const poster = await this.posterService.save({
-      ...body,
-      pub: {
-        id: body.id,
-      },
-    });
-
-    return {
-      ...poster,
-      pub: poster.pub.id,
-    };
+    return this.posterService.save(body);
   }
 
   @ApiOperation({

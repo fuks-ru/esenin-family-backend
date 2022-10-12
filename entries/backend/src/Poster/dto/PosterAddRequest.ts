@@ -16,7 +16,7 @@ export class PosterAddRequest {
   @IsNotEmpty({
     message: 'Выберите бар.',
   })
-  public pub!: string;
+  public pubId!: string;
 
   @ApiProperty()
   @IsNotEmpty({

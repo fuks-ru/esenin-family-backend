@@ -5,7 +5,11 @@ import ru from 'date-fns/locale/ru';
 
 export const fullDateFormat = 'dd MMMM yyyy HH:mm';
 
-export const isoToFullDate = (value: string): string => {
+export const isoToFullDate = (value?: string): string | null => {
+  if (!value) {
+    return null;
+  }
+
   const date = parseISO(value);
 
   return format(date, 'dd MMMM yyyy HH:mm', {
