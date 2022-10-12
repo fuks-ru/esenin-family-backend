@@ -1,8 +1,8 @@
-import { roleApi } from 'admin/entities/role/model/roleApi';
 import { IEnumOption } from 'admin/shared/ui/EditModal';
+import { pubApi } from 'admin/entities/pub/model/pubApi';
 
-export const useRoleEnumOptions = (): IEnumOption[] => {
-  const { options } = roleApi.useGetListQuery(undefined, {
+export const usePubEnumOptions = (): IEnumOption[] => {
+  const { options } = pubApi.useGetListQuery(undefined, {
     selectFromResult: ({ data = [] }) => ({
       options: data.map((item) => ({
         label: item.name,

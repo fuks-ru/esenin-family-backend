@@ -7,6 +7,7 @@ import { v4 } from 'uuid';
 import { IRtkResponseError } from '@fuks-ru/common-frontend';
 
 import { UploadImage } from 'admin/shared/ui/UploadImage';
+import { DatePicker } from 'admin/shared/ui/DatePicker';
 
 export interface IEnumOption {
   label: string;
@@ -18,7 +19,7 @@ export interface IFormDataType<Data extends { id: string }> {
   label?: string;
   field:
     | {
-        type: 'text' | 'image';
+        type: 'text' | 'image' | 'date' | 'textarea';
       }
     | {
         type: 'enum';
@@ -72,6 +73,10 @@ export const EditModal = <Data extends Store & { id: string }>({
         return;
       }
 
+      if ('error' in result) {
+        return;
+      }
+
       onClose();
     },
     [form, onClose, onSave],
@@ -105,10 +110,22 @@ export const EditModal = <Data extends Store & { id: string }>({
           const dataIndex = String(data.dataIndex);
 
           switch (data.field.type) {
+            case 'textarea':
+              return (
+                <Form.Item name={dataIndex} label={data.label} key={dataIndex}>
+                  <Input.TextArea rows={6} />
+                </Form.Item>
+              );
             case 'image':
               return (
                 <Form.Item name={dataIndex} label={data.label} key={dataIndex}>
                   <UploadImage />
+                </Form.Item>
+              );
+            case 'date':
+              return (
+                <Form.Item name={dataIndex} label={data.label} key={dataIndex}>
+                  <DatePicker />
                 </Form.Item>
               );
             case 'enum':

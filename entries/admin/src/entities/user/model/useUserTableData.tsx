@@ -28,9 +28,11 @@ const getColumns = (
 ];
 
 export const useUserTableData = (roles: IEnumOption[]): IResult => {
-  const { data = [] } = userApi.useGetListQuery();
-
-  const dataSource = data.map((item) => ({ ...item, key: item.id }));
+  const { dataSource } = userApi.useGetListQuery(undefined, {
+    selectFromResult: ({ data = [] }) => ({
+      dataSource: data.map((item) => ({ ...item, key: item.id })),
+    }),
+  });
 
   return {
     columns: getColumns(roles),

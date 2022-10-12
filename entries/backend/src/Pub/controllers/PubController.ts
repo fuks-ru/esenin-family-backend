@@ -7,13 +7,14 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
-import { ApiOkResponse, ApiOperation } from '@nestjs/swagger';
+import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { Public, Roles } from '@fuks-ru/auth-module';
 
 import { Pub } from 'backend/Pub/entities/Pub';
 import { PubService } from 'backend/Pub/services/PubService';
 import { PubUpdateRequest } from 'backend/Pub/dto/PubUpdateRequest';
 
+@ApiTags('pub')
 @Controller('pub')
 export class PubController {
   public constructor(private readonly pubService: PubService) {}

@@ -14,6 +14,7 @@ export class ConfigGetter {
    */
   public readonly statusResolver: Record<ErrorCode, HttpStatus> = {
     [ErrorCode.PUB_NOT_FOUND]: HttpStatus.NOT_FOUND,
+    [ErrorCode.POSTER_NOT_FOUND]: HttpStatus.NOT_FOUND,
   };
 
   public constructor(private readonly envGetter: EnvGetter) {}

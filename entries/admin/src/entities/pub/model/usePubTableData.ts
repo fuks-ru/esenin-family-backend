@@ -16,9 +16,11 @@ const columns: ColumnsType<Schemas.Pub> = [
 ];
 
 export const usePubTableData = (): IResult => {
-  const { data = [] } = pubApi.useGetListQuery();
-
-  const dataSource = data.map((item) => ({ ...item, key: item.id }));
+  const { dataSource } = pubApi.useGetListQuery(undefined, {
+    selectFromResult: ({ data = [] }) => ({
+      dataSource: data.map((item) => ({ ...item, key: item.id })),
+    }),
+  });
 
   return {
     columns,

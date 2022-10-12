@@ -23,6 +23,7 @@ runs:
         script: |
           docker run --name esenin-family-backend \
           --rm ${{ inputs.detached && '-d' }} \
+          -e DB_TYPE="postgres" \
           -e POSTGRES_PASSWORD="${{ fromJson(inputs.secret-context).POSTGRES_PASSWORD }}" \
           -e POSTGRES_USER="${{ fromJson(inputs.secret-context).POSTGRES_USER }}" \
           -e POSTGRES_HOST="esenin-family-postgres" \

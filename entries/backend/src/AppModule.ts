@@ -6,6 +6,7 @@ import { AuthModule } from '@fuks-ru/auth-module';
 import { ConfigGetter } from 'backend/Config/services/ConfigGetter';
 import { PubModule } from 'backend/Pub/PubModule';
 import { ConfigModule } from 'backend/Config/ConfigModule';
+import { PosterModule } from 'backend/Poster/PosterModule';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { ConfigModule } from 'backend/Config/ConfigModule';
         configGetter.getTypeOrmConfig(),
     }),
     PubModule,
+    PosterModule,
   ],
 })
 export class AppModule {}

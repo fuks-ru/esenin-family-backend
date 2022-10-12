@@ -1,6 +1,7 @@
 export POSTGRES_HOST="localhost"
 export POSTGRES_USER="root"
 export POSTGRES_PASSWORD="root"
+export DB_TYPE="postgres"
 
 docker run --name esenin-family-postgres \
   --rm \

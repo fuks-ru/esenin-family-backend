@@ -1697,6 +1697,7 @@ __metadata:
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.7
     "@reduxjs/toolkit": ^1.8.5
     "@svgr/webpack": ^6.3.1
+    "@types/date-fns": ^2.6.0
     "@types/qs": ^6.9.7
     "@types/react": ^18.0.21
     "@types/react-dom": ^18.0.6
@@ -1708,6 +1709,7 @@ __metadata:
     core-js: ^3.25.3
     cross-env: ^7.0.3
     css-loader: ^6.7.1
+    date-fns: ^2.29.3
     fork-ts-checker-webpack-plugin: ^7.2.13
     html-webpack-plugin: ^5.5.0
     mini-css-extract-plugin: ^2.6.1
@@ -1715,6 +1717,7 @@ __metadata:
     openapi-client-axios: ^5.3.0
     qs: ^6.11.0
     rc-field-form: ^1.27.2
+    rc-picker: ^2.6.10
     rc-util: ^5.24.4
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -2610,6 +2613,15 @@ __metadata:
   dependencies:
     "@types/express": "*"
   checksum: f390f3af1b1711190dee2c2ecd9af33af81fbde8d81ee820dadb6fe1e0d80c3faba40af37c6ed36fb88b04b64870f6a021f7e9edceecd17c42fe22abe0af5005
+  languageName: node
+  linkType: hard
+
+"@types/date-fns@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "@types/date-fns@npm:2.6.0"
+  dependencies:
+    date-fns: "*"
+  checksum: 6839db1d12d6586cd572e8aa77efc2ea88fd6566b7902641cf3efe2e22518aff067df2ba433539a275a3ab1169612b54d007ddcc2800d846be4f7e629cd7bfb3
   languageName: node
   linkType: hard
 
@@ -5126,7 +5138,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:2.x, date-fns@npm:^2.16.1, date-fns@npm:^2.28.0":
+"date-fns@npm:*, date-fns@npm:2.x, date-fns@npm:^2.16.1, date-fns@npm:^2.28.0, date-fns@npm:^2.29.3":
   version: 2.29.3
   resolution: "date-fns@npm:2.29.3"
   checksum: e01cf5b62af04e05dfff921bb9c9933310ed0e1ae9a81eb8653452e64dc841acf7f6e01e1a5ae5644d0337e9a7f936175fd2cb6819dc122fdd9c5e86c56be484
@@ -10613,7 +10625,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rc-picker@npm:~2.6.10":
+"rc-picker@npm:^2.6.10, rc-picker@npm:~2.6.10":
   version: 2.6.10
   resolution: "rc-picker@npm:2.6.10"
   dependencies:
