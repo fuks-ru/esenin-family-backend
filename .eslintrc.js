@@ -5,7 +5,11 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 module.exports = {
   extends: ['eslint-config-fuks'],
   parserOptions: {
-    project: ['entries/*/tsconfig.json', 'tsconfig.eslint.json'],
+    project: [
+      'entries/*/tsconfig.json',
+      'entries/*/tsconfig.config.json',
+      'tsconfig.eslint.json',
+    ],
     sourceType: 'module',
   },
   settings: {
@@ -23,12 +27,4 @@ module.exports = {
     'i18next/no-literal-string': ['off'],
     'react/jsx-props-no-spreading': ['off'],
   },
-  overrides: [
-    {
-      files: ['*.json'],
-      parserOptions: {
-        project: false,
-      },
-    },
-  ],
 };

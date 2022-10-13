@@ -7,6 +7,8 @@ import { ConfigGetter } from 'backend/Config/services/ConfigGetter';
 import { PubModule } from 'backend/Pub/PubModule';
 import { ConfigModule } from 'backend/Config/ConfigModule';
 import { PosterModule } from 'backend/Poster/PosterModule';
+import { TelegrafModule } from 'nestjs-telegraf';
+import { BotModule } from 'backend/Bot/BotModule';
 
 @Module({
   imports: [
@@ -33,8 +35,12 @@ import { PosterModule } from 'backend/Poster/PosterModule';
       useFactory: (configGetter: ConfigGetter) =>
         configGetter.getTypeOrmConfig(),
     }),
+    TelegrafModule.forRoot({
+      token: '5790987925:AAGlHrEnA9ItkM4FVm1GiYLpJ7vqDwCsirI',
+    }),
     PubModule,
     PosterModule,
+    BotModule,
   ],
 })
 export class AppModule {}
