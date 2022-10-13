@@ -26,7 +26,7 @@ import { BotModule } from 'backend/Bot/BotModule';
         apiPrefix: configGetter.getApiPrefix(),
         statusResolver: configGetter.statusResolver,
         swagger: {
-          generators: ['axios', 'dart'],
+          generators: ['axios'],
         },
       }),
     }),
@@ -36,7 +36,7 @@ import { BotModule } from 'backend/Bot/BotModule';
         configGetter.getTypeOrmConfig(),
     }),
     TelegrafModule.forRoot({
-      token: '5790987925:AAGlHrEnA9ItkM4FVm1GiYLpJ7vqDwCsirI',
+      token: '5716277443:AAEKXzFLSeyJKCuZNp_mfKNBRUtIGEFA-F0',
     }),
     PubModule,
     PosterModule,
