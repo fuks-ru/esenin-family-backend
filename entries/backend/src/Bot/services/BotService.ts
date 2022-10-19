@@ -1,8 +1,6 @@
-import { Ctx, Message, On, Start, Update } from 'nestjs-telegraf';
+import { Ctx, On, Start, Update } from 'nestjs-telegraf';
 import { Context, Markup, Scenes } from 'telegraf';
 import { UseFilters } from '@nestjs/common';
-import { Public } from '@fuks-ru/auth-module';
-import { Message as MessageData, Update as UpdateData } from 'typegram';
 
 import { TelegrafExceptionFilter } from 'backend/Bot/filters/BotErrorFilter';
 
@@ -10,7 +8,6 @@ import { TelegrafExceptionFilter } from 'backend/Bot/filters/BotErrorFilter';
 @UseFilters(TelegrafExceptionFilter)
 export class BotService {
   @Start()
-  @Public()
   public async start(@Ctx() ctx: Context): Promise<void> {
     await ctx.replyWithHTML(
       'Войди по номеру, чтобы редактировать афишу',
@@ -19,7 +16,6 @@ export class BotService {
   }
 
   @On('contact')
-  @Public()
   public async phone(@Ctx() ctx: Context): Promise<void> {
     console.log(ctx);
   }

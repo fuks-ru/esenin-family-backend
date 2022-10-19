@@ -2,12 +2,12 @@ import { CommonModule } from '@fuks-ru/common-backend';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from '@fuks-ru/auth-module';
+import { TelegrafModule } from 'nestjs-telegraf';
 
 import { ConfigGetter } from 'backend/Config/services/ConfigGetter';
 import { PubModule } from 'backend/Pub/PubModule';
 import { ConfigModule } from 'backend/Config/ConfigModule';
 import { PosterModule } from 'backend/Poster/PosterModule';
-import { TelegrafModule } from 'nestjs-telegraf';
 import { BotModule } from 'backend/Bot/BotModule';
 
 @Module({
