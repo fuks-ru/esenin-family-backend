@@ -2752,10 +2752,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:590ae7c88980196fec8da3af0b7f4d53821fd07c6e95f795cd386672645b58447886cef557a55a4a204ce530649b24c439e78f6b4ce0b393ebb07ea0a04ee1fa#npm:0.9.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.9.0%2Fae9ed8354b62d45e75daae8643a2e849d038c5f5", {\
-          "packageLocation": "./.yarn/__virtual__/@fuks-ru-auth-client-virtual-c1bf45f23d/0/cache/@fuks-ru-auth-client-npm-0.9.0-52243babf5-3c2f369c4c.zip/node_modules/@fuks-ru/auth-client/",\
+        ["virtual:e5404f81927ed2a451ab0b15f235cb8fd7490a1d3c8d7e8eba5df4b2115d86bf4cbce1da471bbae3e5d5f7abec32b689c4a090dc21308080ab8f51798170c690#npm:0.9.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.9.0%2Fae9ed8354b62d45e75daae8643a2e849d038c5f5", {\
+          "packageLocation": "./.yarn/__virtual__/@fuks-ru-auth-client-virtual-d832ffcf89/0/cache/@fuks-ru-auth-client-npm-0.9.0-52243babf5-3c2f369c4c.zip/node_modules/@fuks-ru/auth-client/",\
           "packageDependencies": [\
-            ["@fuks-ru/auth-client", "virtual:590ae7c88980196fec8da3af0b7f4d53821fd07c6e95f795cd386672645b58447886cef557a55a4a204ce530649b24c439e78f6b4ce0b393ebb07ea0a04ee1fa#npm:0.9.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.9.0%2Fae9ed8354b62d45e75daae8643a2e849d038c5f5"],\
+            ["@fuks-ru/auth-client", "virtual:e5404f81927ed2a451ab0b15f235cb8fd7490a1d3c8d7e8eba5df4b2115d86bf4cbce1da471bbae3e5d5f7abec32b689c4a090dc21308080ab8f51798170c690#npm:0.9.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.9.0%2Fae9ed8354b62d45e75daae8643a2e849d038c5f5"],\
             ["@fuks-ru/common", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#portal:../../../common/packages/common::locator=%40fuks-ru%2Fesenin-family-client%40workspace%3Aentries%2Fbackend"],\
             ["@types/fuks-ru__common", null],\
             ["axios", "npm:0.27.2"],\
@@ -2784,28 +2784,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@fuks-ru/auth-module", [\
-        ["npm:0.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.1.1%2Fb6a805288d2bac73cf194895e49e5f63ba6c469b", {\
-          "packageLocation": "./.yarn/cache/@fuks-ru-auth-module-npm-0.1.1-c950e14935-11263c4c82.zip/node_modules/@fuks-ru/auth-module/",\
+        ["npm:0.2.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.2.0%2F7ad483c255ae9be89f34cb4837544453cb462ce3", {\
+          "packageLocation": "./.yarn/cache/@fuks-ru-auth-module-npm-0.2.0-c0cfa6a2fe-de44f66c61.zip/node_modules/@fuks-ru/auth-module/",\
           "packageDependencies": [\
-            ["@fuks-ru/auth-module", "npm:0.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.1.1%2Fb6a805288d2bac73cf194895e49e5f63ba6c469b"]\
+            ["@fuks-ru/auth-module", "npm:0.2.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.2.0%2F7ad483c255ae9be89f34cb4837544453cb462ce3"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:0.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.1.1%2Fb6a805288d2bac73cf194895e49e5f63ba6c469b", {\
-          "packageLocation": "./.yarn/__virtual__/@fuks-ru-auth-module-virtual-88d1fb0cf9/0/cache/@fuks-ru-auth-module-npm-0.1.1-c950e14935-11263c4c82.zip/node_modules/@fuks-ru/auth-module/",\
+        ["virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:0.2.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.2.0%2F7ad483c255ae9be89f34cb4837544453cb462ce3", {\
+          "packageLocation": "./.yarn/__virtual__/@fuks-ru-auth-module-virtual-47766041c4/0/cache/@fuks-ru-auth-module-npm-0.2.0-c0cfa6a2fe-de44f66c61.zip/node_modules/@fuks-ru/auth-module/",\
           "packageDependencies": [\
-            ["@fuks-ru/auth-module", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:0.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.1.1%2Fb6a805288d2bac73cf194895e49e5f63ba6c469b"],\
+            ["@fuks-ru/auth-module", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:0.2.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.2.0%2F7ad483c255ae9be89f34cb4837544453cb462ce3"],\
             ["@fuks-ru/auth-client", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:0.9.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.9.0%2Fae9ed8354b62d45e75daae8643a2e849d038c5f5"],\
             ["@fuks-ru/common", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
             ["@fuks-ru/common-backend", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#portal:../../../common/packages/common-backend::locator=%40fuks-ru%2Fesenin-family-client%40workspace%3Aentries%2Fbackend"],\
             ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
             ["@nestjs/core", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
-            ["@nestjs/passport", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.0.0"],\
+            ["@nestjs/passport", "virtual:47766041c45622037ec0f60cf3f53c517004a1d3c0c17ffe413b0641ab1ec9004ad5d60917eaa802188351ffd0fd5bfe85f74c6e1f383373774dc7b581aef4f7#npm:9.0.0"],\
             ["@types/fuks-ru__common", null],\
             ["@types/fuks-ru__common-backend", null],\
             ["@types/nestjs__common", null],\
             ["@types/nestjs__core", null],\
-            ["@types/nestjs__passport", null],\
             ["@types/rxjs", null],\
             ["passport", "npm:0.6.0"],\
             ["passport-custom", "npm:1.1.1"],\
@@ -2816,32 +2815,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@fuks-ru/common",\
             "@nestjs/common",\
             "@nestjs/core",\
-            "@nestjs/passport",\
             "@types/fuks-ru__common-backend",\
             "@types/fuks-ru__common",\
             "@types/nestjs__common",\
             "@types/nestjs__core",\
-            "@types/nestjs__passport",\
             "@types/rxjs",\
             "rxjs"\
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.1.1%2Fb6a805288d2bac73cf194895e49e5f63ba6c469b", {\
-          "packageLocation": "./.yarn/__virtual__/@fuks-ru-auth-module-virtual-590ae7c889/0/cache/@fuks-ru-auth-module-npm-0.1.1-c950e14935-11263c4c82.zip/node_modules/@fuks-ru/auth-module/",\
+        ["virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.2.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.2.0%2F7ad483c255ae9be89f34cb4837544453cb462ce3", {\
+          "packageLocation": "./.yarn/__virtual__/@fuks-ru-auth-module-virtual-e5404f8192/0/cache/@fuks-ru-auth-module-npm-0.2.0-c0cfa6a2fe-de44f66c61.zip/node_modules/@fuks-ru/auth-module/",\
           "packageDependencies": [\
-            ["@fuks-ru/auth-module", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.1.1%2Fb6a805288d2bac73cf194895e49e5f63ba6c469b"],\
-            ["@fuks-ru/auth-client", "virtual:590ae7c88980196fec8da3af0b7f4d53821fd07c6e95f795cd386672645b58447886cef557a55a4a204ce530649b24c439e78f6b4ce0b393ebb07ea0a04ee1fa#npm:0.9.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.9.0%2Fae9ed8354b62d45e75daae8643a2e849d038c5f5"],\
+            ["@fuks-ru/auth-module", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.2.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.2.0%2F7ad483c255ae9be89f34cb4837544453cb462ce3"],\
+            ["@fuks-ru/auth-client", "virtual:e5404f81927ed2a451ab0b15f235cb8fd7490a1d3c8d7e8eba5df4b2115d86bf4cbce1da471bbae3e5d5f7abec32b689c4a090dc21308080ab8f51798170c690#npm:0.9.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.9.0%2Fae9ed8354b62d45e75daae8643a2e849d038c5f5"],\
             ["@fuks-ru/common", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#portal:../../../common/packages/common::locator=%40fuks-ru%2Fesenin-family-client%40workspace%3Aentries%2Fbackend"],\
             ["@fuks-ru/common-backend", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#portal:../../../common/packages/common-backend::locator=%40fuks-ru%2Fesenin-family-client%40workspace%3Aentries%2Fbackend"],\
             ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
             ["@nestjs/core", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:9.1.2"],\
-            ["@nestjs/passport", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.0.0"],\
+            ["@nestjs/passport", "virtual:47766041c45622037ec0f60cf3f53c517004a1d3c0c17ffe413b0641ab1ec9004ad5d60917eaa802188351ffd0fd5bfe85f74c6e1f383373774dc7b581aef4f7#npm:9.0.0"],\
             ["@types/fuks-ru__common", null],\
             ["@types/fuks-ru__common-backend", null],\
             ["@types/nestjs__common", null],\
             ["@types/nestjs__core", null],\
-            ["@types/nestjs__passport", null],\
             ["@types/rxjs", null],\
             ["passport", "npm:0.6.0"],\
             ["passport-custom", "npm:1.1.1"],\
@@ -2852,12 +2848,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@fuks-ru/common",\
             "@nestjs/common",\
             "@nestjs/core",\
-            "@nestjs/passport",\
             "@types/fuks-ru__common-backend",\
             "@types/fuks-ru__common",\
             "@types/nestjs__common",\
             "@types/nestjs__core",\
-            "@types/nestjs__passport",\
             "@types/rxjs",\
             "rxjs"\
           ],\
@@ -3179,12 +3173,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@fuks-ru-esenin-family-client-virtual-62df35f4f1/1/entries/backend/",\
           "packageDependencies": [\
             ["@fuks-ru/esenin-family-client", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#workspace:entries/backend"],\
-            ["@fuks-ru/auth-module", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:0.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.1.1%2Fb6a805288d2bac73cf194895e49e5f63ba6c469b"],\
+            ["@fuks-ru/auth-module", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:0.2.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.2.0%2F7ad483c255ae9be89f34cb4837544453cb462ce3"],\
             ["@fuks-ru/common", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
             ["@fuks-ru/common-backend", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#portal:../../../common/packages/common-backend::locator=%40fuks-ru%2Fesenin-family-client%40workspace%3Aentries%2Fbackend"],\
             ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
             ["@nestjs/core", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
-            ["@nestjs/passport", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.0.0"],\
             ["@nestjs/platform-express", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
             ["@nestjs/swagger", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:6.1.2"],\
             ["@nestjs/typeorm", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.0.1"],\
@@ -3226,12 +3219,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./entries/backend/",\
           "packageDependencies": [\
             ["@fuks-ru/esenin-family-client", "workspace:entries/backend"],\
-            ["@fuks-ru/auth-module", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.1.1%2Fb6a805288d2bac73cf194895e49e5f63ba6c469b"],\
+            ["@fuks-ru/auth-module", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.2.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.2.0%2F7ad483c255ae9be89f34cb4837544453cb462ce3"],\
             ["@fuks-ru/common", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#portal:../../../common/packages/common::locator=%40fuks-ru%2Fesenin-family-client%40workspace%3Aentries%2Fbackend"],\
             ["@fuks-ru/common-backend", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#portal:../../../common/packages/common-backend::locator=%40fuks-ru%2Fesenin-family-client%40workspace%3Aentries%2Fbackend"],\
             ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
             ["@nestjs/core", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:9.1.2"],\
-            ["@nestjs/passport", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.0.0"],\
             ["@nestjs/platform-express", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:9.1.2"],\
             ["@nestjs/swagger", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:6.1.2"],\
             ["@nestjs/typeorm", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:9.0.1"],\
@@ -3687,14 +3679,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.0.0", {\
-          "packageLocation": "./.yarn/__virtual__/@nestjs-passport-virtual-90780638d7/0/cache/@nestjs-passport-npm-9.0.0-21a609d0dc-85651ed1f6.zip/node_modules/@nestjs/passport/",\
+        ["virtual:47766041c45622037ec0f60cf3f53c517004a1d3c0c17ffe413b0641ab1ec9004ad5d60917eaa802188351ffd0fd5bfe85f74c6e1f383373774dc7b581aef4f7#npm:9.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/@nestjs-passport-virtual-4224122056/0/cache/@nestjs-passport-npm-9.0.0-21a609d0dc-85651ed1f6.zip/node_modules/@nestjs/passport/",\
           "packageDependencies": [\
-            ["@nestjs/passport", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.0.0"],\
+            ["@nestjs/passport", "virtual:47766041c45622037ec0f60cf3f53c517004a1d3c0c17ffe413b0641ab1ec9004ad5d60917eaa802188351ffd0fd5bfe85f74c6e1f383373774dc7b581aef4f7#npm:9.0.0"],\
             ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
             ["@types/nestjs__common", null],\
             ["@types/passport", null],\
-            ["passport", null]\
+            ["passport", "npm:0.6.0"]\
           ],\
           "packagePeers": [\
             "@nestjs/common",\

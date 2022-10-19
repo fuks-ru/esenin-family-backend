@@ -9,8 +9,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
-import { Roles, RolesGuard } from '@fuks-ru/auth-module';
-import { AuthGuard } from '@nestjs/passport';
+import { Roles, RolesGuard, AuthJwtGuard } from '@fuks-ru/auth-module';
 
 import { Pub } from 'backend/Pub/entities/Pub';
 import { PubService } from 'backend/Pub/services/PubService';
@@ -52,7 +51,7 @@ export class PubController {
     type: Pub,
   })
   @Roles('moderator', 'admin')
-  @UseGuards(AuthGuard('auth-jwt'), RolesGuard)
+  @UseGuards(AuthJwtGuard, RolesGuard)
   public update(
     @Body() body: PubUpdateRequest,
     @Param('id') id: string,
@@ -71,7 +70,7 @@ export class PubController {
   })
   @Post('/')
   @Roles('moderator', 'admin')
-  @UseGuards(AuthGuard('auth-jwt'), RolesGuard)
+  @UseGuards(AuthJwtGuard, RolesGuard)
   public add(@Body() body: Pub): Promise<Pub> {
     return this.pubService.add(body);
   }
@@ -81,7 +80,7 @@ export class PubController {
   })
   @Delete('/:id')
   @Roles('moderator', 'admin')
-  @UseGuards(AuthGuard('auth-jwt'), RolesGuard)
+  @UseGuards(AuthJwtGuard, RolesGuard)
   public delete(@Param('id') id: string): Promise<void> {
     return this.pubService.deleteById(id);
   }
