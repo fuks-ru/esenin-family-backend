@@ -1,13 +1,15 @@
 import { Ctx, On, Start, Update } from 'nestjs-telegraf';
 import { Context, Markup, Scenes } from 'telegraf';
-import { UseFilters } from '@nestjs/common';
+import { UseFilters, UseGuards } from '@nestjs/common';
 
 import { TelegrafExceptionFilter } from 'backend/Bot/filters/BotErrorFilter';
+import { TelegramGuard } from 'backend/Bot/guards/TelegramGuard';
 
 @Update()
 @UseFilters(TelegrafExceptionFilter)
 export class BotService {
   @Start()
+  @UseGuards(TelegramGuard)
   public async start(@Ctx() ctx: Context): Promise<void> {
     await ctx.replyWithHTML(
       'Войди по номеру, чтобы редактировать афишу',
