@@ -1,34 +1,33 @@
 import { Ctx, On, Start, Update } from 'nestjs-telegraf';
-import { Context, Markup, Scenes } from 'telegraf';
+import { Markup } from 'telegraf';
 import { UseFilters, UseGuards } from '@nestjs/common';
+import { Roles, Schemas } from '@fuks-ru/auth-module';
 
 import { TelegrafExceptionFilter } from 'backend/Bot/filters/BotErrorFilter';
-import { TelegramGuard } from 'backend/Bot/guards/TelegramGuard';
+import { TelegramAuthGuard } from 'backend/Bot/guards/TelegramAuthGuard';
+import { User } from 'backend/Bot/decorators/User';
+import { IContext } from 'backend/Bot/types/IContext';
+import { TelegramLoginGuard } from 'backend/Bot/guards/TelegramLoginGuard';
+import { RolesGuard } from 'backend/Bot/guards/RolesGuard';
 
 @Update()
 @UseFilters(TelegrafExceptionFilter)
 export class BotService {
   @Start()
-  @UseGuards(TelegramGuard)
-  public async start(@Ctx() ctx: Context): Promise<void> {
-    await ctx.replyWithHTML(
-      'Войди по номеру, чтобы редактировать афишу',
-      Markup.keyboard([Markup.button.contactRequest('Войти')]),
-    );
-  }
+  @Roles('admin', 'moderator')
+  @UseGuards(TelegramAuthGuard, RolesGuard)
+  public async start(
+    @Ctx() ctx: IContext,
+    @User() user: Schemas.UserVerifyResponse,
+  ): Promise<void> {
+    const name = user.firstName ? `, ${user.firstName}` : '';
 
-  @On('contact')
-  public async phone(@Ctx() ctx: Context): Promise<void> {
-    console.log(ctx);
-  }
-
-  public async test(@Ctx() ctx: Scenes.SceneContext): Promise<void> {
     await ctx.replyWithHTML(
-      'Привет!',
+      `Привет${name}!`,
       Markup.keyboard([
         Markup.button.webApp(
           'Добавить афишу',
-          'https://9106-94-180-203-146.eu.ngrok.io/',
+          'https://82a0-94-180-162-10.eu.ngrok.io/',
         ),
         Markup.button.webApp(
           'Удалить афишу',
@@ -40,5 +39,15 @@ export class BotService {
         ),
       ]),
     );
+  }
+
+  @On('contact')
+  @Roles('admin', 'moderator')
+  @UseGuards(TelegramLoginGuard, RolesGuard)
+  public async phone(
+    @Ctx() ctx: IContext,
+    @User() user: Schemas.UserVerifyResponse,
+  ): Promise<void> {
+    await this.start(ctx, user);
   }
 }

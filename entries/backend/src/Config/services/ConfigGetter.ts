@@ -15,6 +15,11 @@ export class ConfigGetter {
   public readonly statusResolver: Record<ErrorCode, HttpStatus> = {
     [ErrorCode.PUB_NOT_FOUND]: HttpStatus.NOT_FOUND,
     [ErrorCode.POSTER_NOT_FOUND]: HttpStatus.NOT_FOUND,
+    [ErrorCode.MESSAGE_NOT_PRIVATE]: HttpStatus.FORBIDDEN,
+    [ErrorCode.EMPTY_MESSAGE]: HttpStatus.FORBIDDEN,
+    [ErrorCode.ONLY_BOT_ALLOWED]: HttpStatus.FORBIDDEN,
+    [ErrorCode.EMPTY_CONTACT]: HttpStatus.FORBIDDEN,
+    [ErrorCode.NOT_YOU_CONTACT]: HttpStatus.FORBIDDEN,
   };
 
   public constructor(private readonly envGetter: EnvGetter) {}
@@ -53,6 +58,12 @@ export class ConfigGetter {
     return this.envGetter.isDev()
       ? this.getDevTypeOrmConfig()
       : this.getProdTypeOrmConfig();
+  }
+
+  public getInternalRequestToken(): string {
+    return this.envGetter.isDev()
+      ? ''
+      : this.envGetter.getEnv('INTERNAL_REQUEST_TOKEN');
   }
 
   private getProdTypeOrmConfig(): TypeOrmModuleOptions {

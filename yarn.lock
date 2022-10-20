@@ -1629,27 +1629,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fuks-ru/auth-module@npm:0.2.0":
-  version: 0.2.0
-  resolution: "@fuks-ru/auth-module@npm:0.2.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.2.0%2F7ad483c255ae9be89f34cb4837544453cb462ce3"
+"@fuks-ru/auth-client@portal:../auth/entries/backend::locator=esenin-family-backend%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@fuks-ru/auth-client@portal:../auth/entries/backend::locator=esenin-family-backend%40workspace%3A."
   dependencies:
-    "@fuks-ru/auth-client": 0.9.0
+    axios: ^0.27.2
+    openapi-client-axios: ^5.1.2
+  peerDependencies:
+    "@fuks-ru/common": "*"
+  languageName: node
+  linkType: soft
+
+"@fuks-ru/auth-module@portal:../../../auth/packages/auth-module::locator=%40fuks-ru%2Fesenin-family-client%40workspace%3Aentries%2Fbackend":
+  version: 0.0.0-use.local
+  resolution: "@fuks-ru/auth-module@portal:../../../auth/packages/auth-module::locator=%40fuks-ru%2Fesenin-family-client%40workspace%3Aentries%2Fbackend"
+  dependencies:
+    "@fuks-ru/auth-client": "workspace:0.10.4"
     "@nestjs/passport": ^9.0.0
     passport: ^0.6.0
     passport-custom: ^1.1.1
   peerDependencies:
-    "@fuks-ru/common": 0.0.9
-    "@fuks-ru/common-backend": 0.3.7
+    "@fuks-ru/common": "*"
+    "@fuks-ru/common-backend": "*"
     "@nestjs/common": ^9.1.2
     "@nestjs/core": ^9.1.2
     rxjs: ^7.5.7
-  checksum: de44f66c61c78976997e32e94378c6234278f4d026475363b70529baa588040c4ac050bc76ccc0e69e4117e8765a1c85950ef0ef9c9e915cac7695b28e750b1f
   languageName: node
-  linkType: hard
+  linkType: soft
 
-"@fuks-ru/common-backend@portal:../../../common/packages/common-backend::locator=%40fuks-ru%2Fesenin-family-client%40workspace%3Aentries%2Fbackend":
-  version: 0.0.0-use.local
-  resolution: "@fuks-ru/common-backend@portal:../../../common/packages/common-backend::locator=%40fuks-ru%2Fesenin-family-client%40workspace%3Aentries%2Fbackend"
+"@fuks-ru/common-backend@npm:0.6.1":
+  version: 0.6.1
+  resolution: "@fuks-ru/common-backend@npm:0.6.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon-backend%2F0.6.1%2Fc477f73794415954dd0b4835c9606a80d1afd086"
   dependencies:
     "@rollup/plugin-json": ^4.1.0
     "@types/argon2": ^0.15.0
@@ -1678,8 +1688,9 @@ __metadata:
     nestjs-i18n: ^9.1.3
     openapi-client-axios-typegen: ^5.0.2
     ttypescript: ^1.5.13
+  checksum: db171f5511935c9f5b221dd466f1423c4fe52cee64913da30338e469bf75d3c4bb48240a4130ce544f688abf0d66b6b51f29d53968bad60b25f6b3c844f300d1
   languageName: node
-  linkType: soft
+  linkType: hard
 
 "@fuks-ru/common-frontend@npm:0.1.0":
   version: 0.1.0
@@ -1701,17 +1712,6 @@ __metadata:
   checksum: eca1ba91f30dacaee279fd54e7e255207369ca3af59e01b0d08fb63de468ae59ba185cc929bd16075f9a2ffb7f7ac8a8081774ce3a374bdb68fe829e184bfca1
   languageName: node
   linkType: hard
-
-"@fuks-ru/common@portal:../../../common/packages/common::locator=%40fuks-ru%2Fesenin-family-client%40workspace%3Aentries%2Fbackend":
-  version: 0.0.0-use.local
-  resolution: "@fuks-ru/common@portal:../../../common/packages/common::locator=%40fuks-ru%2Fesenin-family-client%40workspace%3Aentries%2Fbackend"
-  peerDependencies:
-    openapi-client-axios: ^5.3.0
-  peerDependenciesMeta:
-    openapi-client-axios:
-      optional: true
-  languageName: node
-  linkType: soft
 
 "@fuks-ru/esenin-family-admin-telegram@workspace:entries/admin-telegram":
   version: 0.0.0-use.local
@@ -1790,9 +1790,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fuks-ru/esenin-family-client@workspace:entries/backend"
   dependencies:
-    "@fuks-ru/auth-module": 0.2.0
-    "@fuks-ru/common": "portal:../../../common/packages/common"
-    "@fuks-ru/common-backend": "portal:../../../common/packages/common-backend"
+    "@fuks-ru/auth-module": "portal:../../../auth/packages/auth-module"
+    "@fuks-ru/common": 0.1.0
+    "@fuks-ru/common-backend": 0.6.1
     "@nestjs/common": ^9.1.2
     "@nestjs/core": ^9.1.2
     "@nestjs/platform-express": ^9.1.2
