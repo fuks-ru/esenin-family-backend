@@ -1617,23 +1617,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fuks-ru/auth-client@npm:0.10.4":
-  version: 0.10.4
-  resolution: "@fuks-ru/auth-client@npm:0.10.4::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.10.4%2F0a01a6e2a776b6afedea5a75faf085d82ad4038e"
+"@fuks-ru/auth-client@npm:0.10.5":
+  version: 0.10.5
+  resolution: "@fuks-ru/auth-client@npm:0.10.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.10.5%2F060bb304297c381c095d1883f79ff827ccba274d"
   dependencies:
     axios: ^0.27.2
     openapi-client-axios: ^5.1.2
   peerDependencies:
     "@fuks-ru/common": "*"
-  checksum: fbca5188d9a70a8d1a06d8203c5803f75df01050130cea1e1c8c8f97b3cdedf44e0ec49cb2a99c0399efc2ab685eecc494356219fedb4ef2bdaffb409d60492c
+  checksum: 981e9d4564f0633c2e6481dcb66382326f97596881e24642c822ad53230f6a5a2e1374de44423634c544205f66f56a776dd0c1232aeb82ea20673113e246248e
   languageName: node
   linkType: hard
 
-"@fuks-ru/auth-module@npm:0.4.5":
-  version: 0.4.5
-  resolution: "@fuks-ru/auth-module@npm:0.4.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.4.5%2F8ceab526e2ce26d0eee928e27e392604e97c7b99"
+"@fuks-ru/auth-module@npm:0.4.6":
+  version: 0.4.6
+  resolution: "@fuks-ru/auth-module@npm:0.4.6::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.4.6%2F5a9128d3febf8bb5fdf6e02ebddf55d4cce43f9e"
   dependencies:
-    "@fuks-ru/auth-client": 0.10.4
+    "@fuks-ru/auth-client": 0.10.5
     "@nestjs/passport": ^9.0.0
     passport: ^0.6.0
     passport-custom: ^1.1.1
@@ -1643,7 +1643,7 @@ __metadata:
     "@nestjs/common": ^9.1.2
     "@nestjs/core": ^9.1.2
     rxjs: ^7.5.7
-  checksum: 5c46f8f4b5ea4c5f9a9df427ec35845883364f49184fe55ea719db7f1ee373c6e1923af148e59fdd707e64ca82b85cac4c4665d8390eab200004de67163716a4
+  checksum: 61d3c9efa09eb6f864fed83e0b6ce9ca46f031481b8919deb21036241427039e3cf151aede3e22f29e1d7b641af919c5e373cef5612190d97a30c93b861136b1
   languageName: node
   linkType: hard
 
@@ -1729,7 +1729,7 @@ __metadata:
     "@babel/preset-env": ^7.19.3
     "@babel/preset-react": ^7.18.6
     "@babel/preset-typescript": ^7.18.6
-    "@fuks-ru/auth-client": 0.10.4
+    "@fuks-ru/auth-client": 0.10.5
     "@fuks-ru/common": 0.1.0
     "@fuks-ru/common-frontend": 0.1.0
     "@fuks-ru/esenin-family-client": "workspace:0.0.1"
@@ -1780,7 +1780,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fuks-ru/esenin-family-client@workspace:entries/backend"
   dependencies:
-    "@fuks-ru/auth-module": 0.4.5
+    "@fuks-ru/auth-module": 0.4.6
     "@fuks-ru/common": 0.1.0
     "@fuks-ru/common-backend": 0.6.1
     "@nestjs/common": ^9.1.2

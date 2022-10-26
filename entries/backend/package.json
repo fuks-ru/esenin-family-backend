@@ -33,7 +33,7 @@
     "registry": "https://npm.pkg.github.com"
   },
   "devDependencies": {
-    "@fuks-ru/auth-module": "0.4.5",
+    "@fuks-ru/auth-module": "0.4.6",
     "@fuks-ru/common": "0.1.0",
     "@fuks-ru/common-backend": "0.6.1",
     "@nestjs/common": "^9.1.2",
