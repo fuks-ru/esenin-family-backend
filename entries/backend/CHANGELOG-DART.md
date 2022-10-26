@@ -1,3 +1,7 @@
+# 0.0.5
+
+Add telegram bot
+
 # 0.0.4
 
 Pass pubId instead of pub

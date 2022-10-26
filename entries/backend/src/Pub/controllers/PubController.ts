@@ -6,9 +6,10 @@ import {
   Param,
   Patch,
   Post,
+  UseGuards,
 } from '@nestjs/common';
 import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
-import { Public, Roles } from '@fuks-ru/auth-module';
+import { Roles, RolesGuard, AuthJwtGuard } from '@fuks-ru/auth-module';
 
 import { Pub } from 'backend/Pub/entities/Pub';
 import { PubService } from 'backend/Pub/services/PubService';
@@ -27,7 +28,6 @@ export class PubController {
     type: Pub,
     isArray: true,
   })
-  @Public()
   public list(): Promise<Pub[]> {
     return this.pubService.getAll();
   }
@@ -39,7 +39,6 @@ export class PubController {
   @ApiOkResponse({
     type: Pub,
   })
-  @Public()
   public get(@Param('id') id: string): Promise<Pub> {
     return this.pubService.getById(id);
   }
@@ -52,6 +51,7 @@ export class PubController {
     type: Pub,
   })
   @Roles('moderator', 'admin')
+  @UseGuards(AuthJwtGuard, RolesGuard)
   public update(
     @Body() body: PubUpdateRequest,
     @Param('id') id: string,
@@ -70,6 +70,7 @@ export class PubController {
   })
   @Post('/')
   @Roles('moderator', 'admin')
+  @UseGuards(AuthJwtGuard, RolesGuard)
   public add(@Body() body: Pub): Promise<Pub> {
     return this.pubService.add(body);
   }
@@ -79,6 +80,7 @@ export class PubController {
   })
   @Delete('/:id')
   @Roles('moderator', 'admin')
+  @UseGuards(AuthJwtGuard, RolesGuard)
   public delete(@Param('id') id: string): Promise<void> {
     return this.pubService.deleteById(id);
   }

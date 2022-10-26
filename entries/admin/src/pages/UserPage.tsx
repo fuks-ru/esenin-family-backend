@@ -35,7 +35,12 @@ export const UserPage: FC = () => {
       {activeUser && (
         <EditModal
           initialData={activeUser}
-          title={activeUser.email}
+          title={
+            activeUser.email ||
+            activeUser.firstName ||
+            activeUser.lastName ||
+            'Редактирование пользователя'
+          }
           dataTypes={userFormDataTypes}
           onSave={update}
           onClose={() => setActiveUser(null)}

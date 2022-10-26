@@ -6,9 +6,10 @@ import {
   Param,
   Patch,
   Post,
+  UseGuards,
 } from '@nestjs/common';
 import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
-import { Public, Roles } from '@fuks-ru/auth-module';
+import { Roles, RolesGuard, AuthJwtGuard } from '@fuks-ru/auth-module';
 
 import { PosterUpdateRequest } from 'backend/Poster/dto/PosterUpdateRequest';
 import { PosterService } from 'backend/Poster/services/PosterService';
@@ -28,7 +29,6 @@ export class PosterController {
     type: PosterResponse,
     isArray: true,
   })
-  @Public()
   public list(): Promise<PosterResponse[]> {
     return this.posterService.getAll();
   }
@@ -40,7 +40,6 @@ export class PosterController {
   @ApiOkResponse({
     type: PosterResponse,
   })
-  @Public()
   public get(@Param('id') id: string): Promise<PosterResponse> {
     return this.posterService.getById(id);
   }
@@ -53,6 +52,7 @@ export class PosterController {
     type: PosterResponse,
   })
   @Roles('moderator', 'admin')
+  @UseGuards(AuthJwtGuard, RolesGuard)
   public update(
     @Body() body: PosterUpdateRequest,
     @Param('id') id: string,
@@ -71,6 +71,7 @@ export class PosterController {
   })
   @Post('/')
   @Roles('moderator', 'admin')
+  @UseGuards(AuthJwtGuard, RolesGuard)
   public async add(@Body() body: PosterAddRequest): Promise<PosterResponse> {
     return this.posterService.save(body);
   }
@@ -80,6 +81,7 @@ export class PosterController {
   })
   @Delete('/:id')
   @Roles('moderator', 'admin')
+  @UseGuards(AuthJwtGuard, RolesGuard)
   public delete(@Param('id') id: string): Promise<void> {
     return this.posterService.deleteById(id);
   }
