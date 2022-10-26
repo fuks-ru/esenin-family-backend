@@ -6224,7 +6224,7 @@ __metadata:
   dependencies:
     "@rushstack/eslint-patch": ^1.2.0
     eslint: ^8.24.0
-    eslint-config-fuks: ^1.9.1
+    eslint-config-fuks: ^1.9.2
     typescript: 4.8.3
   languageName: unknown
   linkType: soft
@@ -6275,9 +6275,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-fuks@npm:^1.9.1":
-  version: 1.9.1
-  resolution: "eslint-config-fuks@npm:1.9.1"
+"eslint-config-fuks@npm:^1.9.2":
+  version: 1.9.2
+  resolution: "eslint-config-fuks@npm:1.9.2"
   dependencies:
     "@typescript-eslint/eslint-plugin": ^5.38.0
     "@typescript-eslint/parser": ^5.38.0
@@ -6308,7 +6308,7 @@ __metadata:
     eslint: ^8.5.0
     prettier: ^2.5.0
     typescript: ^4.6.3
-  checksum: f14cb25a3c0a003598f686d7b4bcb378367378d4ccfbd7e5ad01c772981f297c64935204e76b165ca14e06337b2abcf3677af0c10b4b0bdfab17dd5decd255c8
+  checksum: eabb41429bcccaabea5dfe336c0bc0afdddeed37bd217f363b47699e13bfbef6fa614a483603c1b228d3ed2b528c24c5f2c4e22f869d4e6127c0cd44aaf30e77
   languageName: node
   linkType: hard
 
