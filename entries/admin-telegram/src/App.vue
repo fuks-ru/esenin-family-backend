@@ -1,7 +1,5 @@
 <script lang="ts">
-import { tgApi } from 'admin-telegram/shared/api';
-
-console.log(tgApi.initDataUnsafe);
+export default {}
 </script>
 
 <template>Привет, Дима Пасхин! :*</template>
