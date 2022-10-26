@@ -1,6 +1,5 @@
 {
   "name": "esenin-family-backend",
-  "version": "1.0.0",
   "main": "index.js",
   "author": "Dmitry Fuks",
   "license": "MIT",
