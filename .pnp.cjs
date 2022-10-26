@@ -38,7 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [\
       ["@fuks-ru/esenin-family-admin", ["workspace:entries/admin"]],\
       ["@fuks-ru/esenin-family-admin-telegram", ["workspace:entries/admin-telegram"]],\
-      ["@fuks-ru/esenin-family-client", ["virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#workspace:entries/backend", "workspace:entries/backend"]],\
+      ["@fuks-ru/esenin-family-client", ["virtual:85e9d83a79f480ebb31fdcb2dfb7f016baf41089d5bcf582134b82867e52d07100cba009eaf1ef1e9561f8d61e9bcfaadc8ceec3b1c998d76c43bec9d719641b#workspace:entries/backend", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#workspace:entries/backend", "workspace:entries/backend"]],\
       ["esenin-family-backend", ["workspace:."]]\
     ],\
     "fallbackPool": [\
@@ -2752,11 +2752,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:09e62e14d29b32edf5df8308e09675b84e34173acd3dd7ce90de891b190083855ce8ba380f0d5155c378c4e1969e20bc039424f919eaeb95e86340c3c0dec6ee#npm:0.10.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.10.5%2F060bb304297c381c095d1883f79ff827ccba274d", {\
-          "packageLocation": "./.yarn/__virtual__/@fuks-ru-auth-client-virtual-595df30e15/0/cache/@fuks-ru-auth-client-npm-0.10.5-2104a80dd5-981e9d4564.zip/node_modules/@fuks-ru/auth-client/",\
+        ["virtual:2f06ee1833a88d64233470e658f816d4ea604d379f80ef973cef3ad3814755e5f9230312abf6ac8e780b523b5dc7b461bc6fe20993dfb9b70fe4f66ddf6944d8#npm:0.10.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.10.5%2F060bb304297c381c095d1883f79ff827ccba274d", {\
+          "packageLocation": "./.yarn/__virtual__/@fuks-ru-auth-client-virtual-9a00c752de/0/cache/@fuks-ru-auth-client-npm-0.10.5-2104a80dd5-981e9d4564.zip/node_modules/@fuks-ru/auth-client/",\
           "packageDependencies": [\
-            ["@fuks-ru/auth-client", "virtual:09e62e14d29b32edf5df8308e09675b84e34173acd3dd7ce90de891b190083855ce8ba380f0d5155c378c4e1969e20bc039424f919eaeb95e86340c3c0dec6ee#npm:0.10.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.10.5%2F060bb304297c381c095d1883f79ff827ccba274d"],\
-            ["@fuks-ru/common", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
+            ["@fuks-ru/auth-client", "virtual:2f06ee1833a88d64233470e658f816d4ea604d379f80ef973cef3ad3814755e5f9230312abf6ac8e780b523b5dc7b461bc6fe20993dfb9b70fe4f66ddf6944d8#npm:0.10.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.10.5%2F060bb304297c381c095d1883f79ff827ccba274d"],\
+            ["@fuks-ru/common", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
             ["@types/fuks-ru__common", null],\
             ["axios", "npm:0.27.2"],\
             ["openapi-client-axios", "virtual:0cd0511daff75d1665851d3b3ba2aa713e647acb53818db52ee35205f7e1c35d359edb7055cf6a8c6b9e232ae8ee2b3ab8d158b055f1d2e31b85ba9ab7ab6163#npm:5.3.0"]\
@@ -2790,6 +2790,39 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@fuks-ru/auth-module", "npm:0.4.6::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.4.6%2F5a9128d3febf8bb5fdf6e02ebddf55d4cce43f9e"]\
           ],\
           "linkType": "SOFT"\
+        }],\
+        ["virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.4.6::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.4.6%2F5a9128d3febf8bb5fdf6e02ebddf55d4cce43f9e", {\
+          "packageLocation": "./.yarn/__virtual__/@fuks-ru-auth-module-virtual-2f06ee1833/0/cache/@fuks-ru-auth-module-npm-0.4.6-c7f5395da1-61d3c9efa0.zip/node_modules/@fuks-ru/auth-module/",\
+          "packageDependencies": [\
+            ["@fuks-ru/auth-module", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.4.6::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.4.6%2F5a9128d3febf8bb5fdf6e02ebddf55d4cce43f9e"],\
+            ["@fuks-ru/auth-client", "virtual:2f06ee1833a88d64233470e658f816d4ea604d379f80ef973cef3ad3814755e5f9230312abf6ac8e780b523b5dc7b461bc6fe20993dfb9b70fe4f66ddf6944d8#npm:0.10.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.10.5%2F060bb304297c381c095d1883f79ff827ccba274d"],\
+            ["@fuks-ru/common", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
+            ["@fuks-ru/common-backend", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.6.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon-backend%2F0.6.1%2Fc477f73794415954dd0b4835c9606a80d1afd086"],\
+            ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
+            ["@nestjs/core", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2"],\
+            ["@nestjs/passport", "virtual:3be5afcd36ad370a60da52cc1625b2f9ae2d57daa0174eb8f3563fce0bd55a055bf7608393d1d2b62105199d9ca37343584a83b6d142d94a3ad5a212eb44573d#npm:9.0.0"],\
+            ["@types/fuks-ru__common", null],\
+            ["@types/fuks-ru__common-backend", null],\
+            ["@types/nestjs__common", null],\
+            ["@types/nestjs__core", null],\
+            ["@types/rxjs", null],\
+            ["passport", "npm:0.6.0"],\
+            ["passport-custom", "npm:1.1.1"],\
+            ["rxjs", "npm:7.5.7"]\
+          ],\
+          "packagePeers": [\
+            "@fuks-ru/common-backend",\
+            "@fuks-ru/common",\
+            "@nestjs/common",\
+            "@nestjs/core",\
+            "@types/fuks-ru__common-backend",\
+            "@types/fuks-ru__common",\
+            "@types/nestjs__common",\
+            "@types/nestjs__core",\
+            "@types/rxjs",\
+            "rxjs"\
+          ],\
+          "linkType": "HARD"\
         }],\
         ["virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:0.4.6::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.4.6%2F5a9128d3febf8bb5fdf6e02ebddf55d4cce43f9e", {\
           "packageLocation": "./.yarn/__virtual__/@fuks-ru-auth-module-virtual-3be5afcd36/0/cache/@fuks-ru-auth-module-npm-0.4.6-c7f5395da1-61d3c9efa0.zip/node_modules/@fuks-ru/auth-module/",\
@@ -2828,8 +2861,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@fuks-ru-auth-module-virtual-09e62e14d2/0/cache/@fuks-ru-auth-module-npm-0.4.6-c7f5395da1-61d3c9efa0.zip/node_modules/@fuks-ru/auth-module/",\
           "packageDependencies": [\
             ["@fuks-ru/auth-module", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.4.6::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.4.6%2F5a9128d3febf8bb5fdf6e02ebddf55d4cce43f9e"],\
-            ["@fuks-ru/auth-client", "virtual:09e62e14d29b32edf5df8308e09675b84e34173acd3dd7ce90de891b190083855ce8ba380f0d5155c378c4e1969e20bc039424f919eaeb95e86340c3c0dec6ee#npm:0.10.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.10.5%2F060bb304297c381c095d1883f79ff827ccba274d"],\
-            ["@fuks-ru/common", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
+            ["@fuks-ru/auth-client", "virtual:2f06ee1833a88d64233470e658f816d4ea604d379f80ef973cef3ad3814755e5f9230312abf6ac8e780b523b5dc7b461bc6fe20993dfb9b70fe4f66ddf6944d8#npm:0.10.5::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-client%2F0.10.5%2F060bb304297c381c095d1883f79ff827ccba274d"],\
+            ["@fuks-ru/common", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
             ["@fuks-ru/common-backend", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.6.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon-backend%2F0.6.1%2Fc477f73794415954dd0b4835c9606a80d1afd086"],\
             ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
             ["@nestjs/core", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:9.1.2"],\
@@ -2866,10 +2899,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d", {\
-          "packageLocation": "./.yarn/__virtual__/@fuks-ru-common-virtual-937ffb691c/0/cache/@fuks-ru-common-npm-0.1.0-fb13636fee-eca1ba91f3.zip/node_modules/@fuks-ru/common/",\
+        ["virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d", {\
+          "packageLocation": "./.yarn/__virtual__/@fuks-ru-common-virtual-cc8823aa27/0/cache/@fuks-ru-common-npm-0.1.0-fb13636fee-eca1ba91f3.zip/node_modules/@fuks-ru/common/",\
           "packageDependencies": [\
-            ["@fuks-ru/common", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
+            ["@fuks-ru/common", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
             ["@types/openapi-client-axios", null],\
             ["openapi-client-axios", "virtual:0cd0511daff75d1665851d3b3ba2aa713e647acb53818db52ee35205f7e1c35d359edb7055cf6a8c6b9e232ae8ee2b3ab8d158b055f1d2e31b85ba9ab7ab6163#npm:5.3.0"]\
           ],\
@@ -2900,6 +2933,80 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@fuks-ru/common-backend", "npm:0.6.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon-backend%2F0.6.1%2Fc477f73794415954dd0b4835c9606a80d1afd086"]\
           ],\
           "linkType": "SOFT"\
+        }],\
+        ["virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.6.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon-backend%2F0.6.1%2Fc477f73794415954dd0b4835c9606a80d1afd086", {\
+          "packageLocation": "./.yarn/__virtual__/@fuks-ru-common-backend-virtual-46ef06a132/0/cache/@fuks-ru-common-backend-npm-0.6.1-5875a43cae-db171f5511.zip/node_modules/@fuks-ru/common-backend/",\
+          "packageDependencies": [\
+            ["@fuks-ru/common-backend", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.6.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon-backend%2F0.6.1%2Fc477f73794415954dd0b4835c9606a80d1afd086"],\
+            ["@fuks-ru/common", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
+            ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
+            ["@nestjs/core", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2"],\
+            ["@nestjs/platform-express", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2"],\
+            ["@nestjs/swagger", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:6.1.2"],\
+            ["@openapitools/openapi-generator-cli", "npm:2.5.2"],\
+            ["@rollup/plugin-json", "virtual:007493807f0ba164cd6d1be9546da09d371a7a94f73c82521aba6cad13a30770b5f35f77dc348f78529692f5f338676f31b760bc6ee18329add2c88c21711a95#npm:4.1.0"],\
+            ["@types/argon2", "npm:0.15.0"],\
+            ["@types/class-transformer", null],\
+            ["@types/class-validator", null],\
+            ["@types/date-fns", null],\
+            ["@types/express", "npm:4.17.14"],\
+            ["@types/fuks-ru__common", null],\
+            ["@types/nestjs-i18n", null],\
+            ["@types/nestjs__common", null],\
+            ["@types/nestjs__core", null],\
+            ["@types/nestjs__platform-express", null],\
+            ["@types/nestjs__swagger", null],\
+            ["@types/openapi-client-axios-typegen", null],\
+            ["@types/openapitools__openapi-generator-cli", null],\
+            ["@types/ttypescript", null],\
+            ["argon2", "npm:0.29.1"],\
+            ["class-transformer", "npm:0.5.1"],\
+            ["class-validator", "npm:0.13.2"],\
+            ["date-fns", null],\
+            ["express", "npm:4.18.1"],\
+            ["geoip-lite", "npm:1.4.6"],\
+            ["nest-winston", "virtual:007493807f0ba164cd6d1be9546da09d371a7a94f73c82521aba6cad13a30770b5f35f77dc348f78529692f5f338676f31b760bc6ee18329add2c88c21711a95#npm:1.7.1"],\
+            ["nestjs-i18n", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.2.0"],\
+            ["openapi-client-axios-typegen", "npm:5.3.0"],\
+            ["reflect-metadata", "npm:0.1.13"],\
+            ["request-context", "npm:2.0.0"],\
+            ["rollup", "npm:2.79.1"],\
+            ["rollup-plugin-typescript2", "virtual:007493807f0ba164cd6d1be9546da09d371a7a94f73c82521aba6cad13a30770b5f35f77dc348f78529692f5f338676f31b760bc6ee18329add2c88c21711a95#npm:0.34.1"],\
+            ["rxjs", "npm:7.5.7"],\
+            ["ttypescript", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:1.5.13"],\
+            ["uuid", "npm:9.0.0"],\
+            ["winston", "npm:3.8.2"],\
+            ["winston-daily-rotate-file", "virtual:007493807f0ba164cd6d1be9546da09d371a7a94f73c82521aba6cad13a30770b5f35f77dc348f78529692f5f338676f31b760bc6ee18329add2c88c21711a95#npm:4.7.1"]\
+          ],\
+          "packagePeers": [\
+            "@fuks-ru/common",\
+            "@nestjs/common",\
+            "@nestjs/core",\
+            "@nestjs/platform-express",\
+            "@nestjs/swagger",\
+            "@openapitools/openapi-generator-cli",\
+            "@types/class-transformer",\
+            "@types/class-validator",\
+            "@types/date-fns",\
+            "@types/express",\
+            "@types/fuks-ru__common",\
+            "@types/nestjs-i18n",\
+            "@types/nestjs__common",\
+            "@types/nestjs__core",\
+            "@types/nestjs__platform-express",\
+            "@types/nestjs__swagger",\
+            "@types/openapi-client-axios-typegen",\
+            "@types/openapitools__openapi-generator-cli",\
+            "@types/ttypescript",\
+            "class-transformer",\
+            "class-validator",\
+            "date-fns",\
+            "express",\
+            "nestjs-i18n",\
+            "openapi-client-axios-typegen",\
+            "ttypescript"\
+          ],\
+          "linkType": "HARD"\
         }],\
         ["virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:0.6.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon-backend%2F0.6.1%2Fc477f73794415954dd0b4835c9606a80d1afd086", {\
           "packageLocation": "./.yarn/__virtual__/@fuks-ru-common-backend-virtual-007493807f/0/cache/@fuks-ru-common-backend-npm-0.6.1-5875a43cae-db171f5511.zip/node_modules/@fuks-ru/common-backend/",\
@@ -2979,7 +3086,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@fuks-ru-common-backend-virtual-d595e265fe/0/cache/@fuks-ru-common-backend-npm-0.6.1-5875a43cae-db171f5511.zip/node_modules/@fuks-ru/common-backend/",\
           "packageDependencies": [\
             ["@fuks-ru/common-backend", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.6.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon-backend%2F0.6.1%2Fc477f73794415954dd0b4835c9606a80d1afd086"],\
-            ["@fuks-ru/common", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
+            ["@fuks-ru/common", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
             ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
             ["@nestjs/core", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:9.1.2"],\
             ["@nestjs/platform-express", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:9.1.2"],\
@@ -3148,6 +3255,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./entries/admin-telegram/",\
           "packageDependencies": [\
             ["@fuks-ru/esenin-family-admin-telegram", "workspace:entries/admin-telegram"],\
+            ["@fuks-ru/esenin-family-client", "virtual:85e9d83a79f480ebb31fdcb2dfb7f016baf41089d5bcf582134b82867e52d07100cba009eaf1ef1e9561f8d61e9bcfaadc8ceec3b1c998d76c43bec9d719641b#workspace:entries/backend"],\
             ["@types/node", "npm:16.11.65"],\
             ["@vitejs/plugin-vue", "virtual:85e9d83a79f480ebb31fdcb2dfb7f016baf41089d5bcf582134b82867e52d07100cba009eaf1ef1e9561f8d61e9bcfaadc8ceec3b1c998d76c43bec9d719641b#npm:3.1.2"],\
             ["@vue/tsconfig", "virtual:85e9d83a79f480ebb31fdcb2dfb7f016baf41089d5bcf582134b82867e52d07100cba009eaf1ef1e9561f8d61e9bcfaadc8ceec3b1c998d76c43bec9d719641b#npm:0.1.3"],\
@@ -3162,6 +3270,51 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@fuks-ru/esenin-family-client", [\
+        ["virtual:85e9d83a79f480ebb31fdcb2dfb7f016baf41089d5bcf582134b82867e52d07100cba009eaf1ef1e9561f8d61e9bcfaadc8ceec3b1c998d76c43bec9d719641b#workspace:entries/backend", {\
+          "packageLocation": "./.yarn/__virtual__/@fuks-ru-esenin-family-client-virtual-16f296127d/1/entries/backend/",\
+          "packageDependencies": [\
+            ["@fuks-ru/esenin-family-client", "virtual:85e9d83a79f480ebb31fdcb2dfb7f016baf41089d5bcf582134b82867e52d07100cba009eaf1ef1e9561f8d61e9bcfaadc8ceec3b1c998d76c43bec9d719641b#workspace:entries/backend"],\
+            ["@fuks-ru/auth-module", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.4.6::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.4.6%2F5a9128d3febf8bb5fdf6e02ebddf55d4cce43f9e"],\
+            ["@fuks-ru/common", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
+            ["@fuks-ru/common-backend", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.6.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon-backend%2F0.6.1%2Fc477f73794415954dd0b4835c9606a80d1afd086"],\
+            ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
+            ["@nestjs/core", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2"],\
+            ["@nestjs/platform-express", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2"],\
+            ["@nestjs/swagger", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:6.1.2"],\
+            ["@nestjs/typeorm", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.0.1"],\
+            ["@openapitools/openapi-generator-cli", "npm:2.5.2"],\
+            ["@types/cookie-parser", "npm:1.4.3"],\
+            ["@types/express", "npm:4.17.14"],\
+            ["@types/fuks-ru__common", null],\
+            ["axios", "npm:0.27.2"],\
+            ["class-transformer", "npm:0.5.1"],\
+            ["class-validator", "npm:0.13.2"],\
+            ["cookie-parser", "npm:1.4.6"],\
+            ["cross-env", "npm:7.0.3"],\
+            ["express", "npm:4.18.1"],\
+            ["nestjs-i18n", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.2.0"],\
+            ["nestjs-telegraf", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:2.6.2"],\
+            ["openapi-client-axios", "virtual:0cd0511daff75d1665851d3b3ba2aa713e647acb53818db52ee35205f7e1c35d359edb7055cf6a8c6b9e232ae8ee2b3ab8d158b055f1d2e31b85ba9ab7ab6163#npm:5.3.0"],\
+            ["openapi-client-axios-typegen", "npm:5.3.0"],\
+            ["pg", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:8.8.0"],\
+            ["reflect-metadata", "npm:0.1.13"],\
+            ["rxjs", "npm:7.5.7"],\
+            ["sqlite3", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:5.1.2"],\
+            ["telegraf", "npm:4.10.0"],\
+            ["ts-node", "virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#npm:10.9.1"],\
+            ["ts-node-dev", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:2.0.0"],\
+            ["tsconfig-paths", "npm:4.1.0"],\
+            ["ttypescript", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:1.5.13"],\
+            ["typegram", "npm:4.0.0"],\
+            ["typeorm", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:0.3.10"],\
+            ["typescript", "patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"],\
+            ["typescript-transform-paths", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:3.3.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/fuks-ru__common"\
+          ],\
+          "linkType": "SOFT"\
+        }],\
         ["virtual:e6112254faad582f6ae395e7037203d128785f618138b09e640eb543bfa7b77308cda22f2c120d95c4fd3f414712ffc63671e63859a208c49b29b0ac9f92be7d#workspace:entries/backend", {\
           "packageLocation": "./.yarn/__virtual__/@fuks-ru-esenin-family-client-virtual-62df35f4f1/1/entries/backend/",\
           "packageDependencies": [\
@@ -3213,7 +3366,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@fuks-ru/esenin-family-client", "workspace:entries/backend"],\
             ["@fuks-ru/auth-module", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.4.6::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fauth-module%2F0.4.6%2F5a9128d3febf8bb5fdf6e02ebddf55d4cce43f9e"],\
-            ["@fuks-ru/common", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
+            ["@fuks-ru/common", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:0.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon%2F0.1.0%2F8318c956097de51ef775c33816659f6dcd21240d"],\
             ["@fuks-ru/common-backend", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:0.6.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40fuks-ru%2Fcommon-backend%2F0.6.1%2Fc477f73794415954dd0b4835c9606a80d1afd086"],\
             ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
             ["@nestjs/core", "virtual:99dfe12c5ceb2ce18e0d3f9f0a94304824f4c3337722fd42c27ab66e4b520519ca765f142e140949e611825197f21a40ab6a93b0af4a6ea9daa1c4756dd55294#npm:9.1.2"],\
@@ -3509,6 +3662,46 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
+        ["virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2", {\
+          "packageLocation": "./.yarn/unplugged/@nestjs-core-virtual-3d4f1108e5/node_modules/@nestjs/core/",\
+          "packageDependencies": [\
+            ["@nestjs/core", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2"],\
+            ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
+            ["@nestjs/microservices", null],\
+            ["@nestjs/platform-express", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2"],\
+            ["@nestjs/websockets", null],\
+            ["@nuxtjs/opencollective", "npm:0.3.2"],\
+            ["@types/nestjs__common", null],\
+            ["@types/nestjs__microservices", null],\
+            ["@types/nestjs__platform-express", null],\
+            ["@types/nestjs__websockets", null],\
+            ["@types/reflect-metadata", null],\
+            ["@types/rxjs", null],\
+            ["fast-safe-stringify", "npm:2.1.1"],\
+            ["iterare", "npm:1.2.1"],\
+            ["object-hash", "npm:3.0.0"],\
+            ["path-to-regexp", "npm:3.2.0"],\
+            ["reflect-metadata", "npm:0.1.13"],\
+            ["rxjs", "npm:7.5.7"],\
+            ["tslib", "npm:2.4.0"],\
+            ["uuid", "npm:9.0.0"]\
+          ],\
+          "packagePeers": [\
+            "@nestjs/common",\
+            "@nestjs/microservices",\
+            "@nestjs/platform-express",\
+            "@nestjs/websockets",\
+            "@types/nestjs__common",\
+            "@types/nestjs__microservices",\
+            "@types/nestjs__platform-express",\
+            "@types/nestjs__websockets",\
+            "@types/reflect-metadata",\
+            "@types/rxjs",\
+            "reflect-metadata",\
+            "rxjs"\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["virtual:3041ea2758bdfbe7b35c251e39ec00e68606b47f9dd33c30415d0d4dc14040f84dbd97035b8ff15c3c122f37275480184836f3aecd59f0df665319f5aae183cf#npm:8.4.4", {\
           "packageLocation": "./.yarn/unplugged/@nestjs-core-virtual-2f4388d676/node_modules/@nestjs/core/",\
           "packageDependencies": [\
@@ -3698,6 +3891,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
+        ["virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2", {\
+          "packageLocation": "./.yarn/__virtual__/@nestjs-platform-express-virtual-be90d9ebd6/0/cache/@nestjs-platform-express-npm-9.1.2-6a1583df52-f203af9589.zip/node_modules/@nestjs/platform-express/",\
+          "packageDependencies": [\
+            ["@nestjs/platform-express", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2"],\
+            ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
+            ["@nestjs/core", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2"],\
+            ["@types/nestjs__common", null],\
+            ["@types/nestjs__core", null],\
+            ["body-parser", "npm:1.20.0"],\
+            ["cors", "npm:2.8.5"],\
+            ["express", "npm:4.18.1"],\
+            ["multer", "npm:1.4.4-lts.1"],\
+            ["tslib", "npm:2.4.0"]\
+          ],\
+          "packagePeers": [\
+            "@nestjs/common",\
+            "@nestjs/core",\
+            "@types/nestjs__common",\
+            "@types/nestjs__core"\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2", {\
           "packageLocation": "./.yarn/__virtual__/@nestjs-platform-express-virtual-23e31772d8/0/cache/@nestjs-platform-express-npm-9.1.2-6a1583df52-f203af9589.zip/node_modules/@nestjs/platform-express/",\
           "packageDependencies": [\
@@ -3750,6 +3965,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/swagger", "npm:6.1.2"]\
           ],\
           "linkType": "SOFT"\
+        }],\
+        ["virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:6.1.2", {\
+          "packageLocation": "./.yarn/__virtual__/@nestjs-swagger-virtual-6ad328638d/0/cache/@nestjs-swagger-npm-6.1.2-6c9793aac7-1acfddac35.zip/node_modules/@nestjs/swagger/",\
+          "packageDependencies": [\
+            ["@nestjs/swagger", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:6.1.2"],\
+            ["@fastify/static", null],\
+            ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
+            ["@nestjs/core", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2"],\
+            ["@nestjs/mapped-types", "virtual:e03d28237c384ab7110ab671d62b3afd8577fa91af3b564f34f549068714a1bf5da48acfb9ca258ff6755967f0014cf5639d588ddb30019f2ec800d2647602ea#npm:1.1.0"],\
+            ["@types/fastify__static", null],\
+            ["@types/nestjs__common", null],\
+            ["@types/nestjs__core", null],\
+            ["@types/reflect-metadata", null],\
+            ["js-yaml", "npm:4.1.0"],\
+            ["lodash", "npm:4.17.21"],\
+            ["path-to-regexp", "npm:3.2.0"],\
+            ["reflect-metadata", "npm:0.1.13"],\
+            ["swagger-ui-dist", "npm:4.14.0"]\
+          ],\
+          "packagePeers": [\
+            "@fastify/static",\
+            "@nestjs/common",\
+            "@nestjs/core",\
+            "@types/fastify__static",\
+            "@types/nestjs__common",\
+            "@types/nestjs__core",\
+            "@types/reflect-metadata",\
+            "reflect-metadata"\
+          ],\
+          "linkType": "HARD"\
         }],\
         ["virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:6.1.2", {\
           "packageLocation": "./.yarn/__virtual__/@nestjs-swagger-virtual-e03d28237c/0/cache/@nestjs-swagger-npm-6.1.2-6c9793aac7-1acfddac35.zip/node_modules/@nestjs/swagger/",\
@@ -3819,6 +4064,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/typeorm", "npm:9.0.1"]\
           ],\
           "linkType": "SOFT"\
+        }],\
+        ["virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/@nestjs-typeorm-virtual-520b69341c/0/cache/@nestjs-typeorm-npm-9.0.1-048c05d122-fbf8d28405.zip/node_modules/@nestjs/typeorm/",\
+          "packageDependencies": [\
+            ["@nestjs/typeorm", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.0.1"],\
+            ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
+            ["@nestjs/core", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2"],\
+            ["@types/nestjs__common", null],\
+            ["@types/nestjs__core", null],\
+            ["@types/reflect-metadata", null],\
+            ["@types/rxjs", null],\
+            ["@types/typeorm", null],\
+            ["reflect-metadata", "npm:0.1.13"],\
+            ["rxjs", "npm:7.5.7"],\
+            ["typeorm", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:0.3.10"],\
+            ["uuid", "npm:8.3.2"]\
+          ],\
+          "packagePeers": [\
+            "@nestjs/common",\
+            "@nestjs/core",\
+            "@types/nestjs__common",\
+            "@types/nestjs__core",\
+            "@types/reflect-metadata",\
+            "@types/rxjs",\
+            "@types/typeorm",\
+            "reflect-metadata",\
+            "rxjs",\
+            "typeorm"\
+          ],\
+          "linkType": "HARD"\
         }],\
         ["virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.0.1", {\
           "packageLocation": "./.yarn/__virtual__/@nestjs-typeorm-virtual-f8f24ce207/0/cache/@nestjs-typeorm-npm-9.0.1-048c05d122-fbf8d28405.zip/node_modules/@nestjs/typeorm/",\
@@ -13339,6 +13614,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
+        ["virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/nestjs-i18n-virtual-1be16434f0/0/cache/nestjs-i18n-npm-9.2.0-cc47eaed86-aacd126d18.zip/node_modules/nestjs-i18n/",\
+          "packageDependencies": [\
+            ["nestjs-i18n", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.2.0"],\
+            ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
+            ["@nestjs/core", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2"],\
+            ["@types/class-validator", null],\
+            ["@types/nestjs__common", null],\
+            ["@types/nestjs__core", null],\
+            ["@types/rxjs", null],\
+            ["accept-language-parser", "npm:1.5.0"],\
+            ["chokidar", "npm:3.5.3"],\
+            ["class-validator", "npm:0.13.2"],\
+            ["cookie", "npm:0.5.0"],\
+            ["iterare", "npm:1.2.1"],\
+            ["js-yaml", "npm:4.1.0"],\
+            ["rxjs", "npm:7.5.7"],\
+            ["string-format", "npm:2.0.0"]\
+          ],\
+          "packagePeers": [\
+            "@nestjs/common",\
+            "@nestjs/core",\
+            "@types/class-validator",\
+            "@types/nestjs__common",\
+            "@types/nestjs__core",\
+            "@types/rxjs",\
+            "class-validator",\
+            "rxjs"\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.2.0", {\
           "packageLocation": "./.yarn/__virtual__/nestjs-i18n-virtual-23b554f2a3/0/cache/nestjs-i18n-npm-9.2.0-cc47eaed86-aacd126d18.zip/node_modules/nestjs-i18n/",\
           "packageDependencies": [\
@@ -13409,6 +13715,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nestjs-telegraf", "npm:2.6.2"]\
           ],\
           "linkType": "SOFT"\
+        }],\
+        ["virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:2.6.2", {\
+          "packageLocation": "./.yarn/__virtual__/nestjs-telegraf-virtual-990be76034/0/cache/nestjs-telegraf-npm-2.6.2-36245c15a0-9161cb0c7b.zip/node_modules/nestjs-telegraf/",\
+          "packageDependencies": [\
+            ["nestjs-telegraf", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:2.6.2"],\
+            ["@nestjs/common", "virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:9.1.2"],\
+            ["@nestjs/core", "virtual:16f296127daf33b120a3006e969f91d544c94c22f6a17867c0f4fcc4baed1cd15b78b6d163d67a249aa6e18ee0d58322426a014658e715becffeaef11dc95dc7#npm:9.1.2"],\
+            ["@types/nestjs__common", null],\
+            ["@types/nestjs__core", null],\
+            ["@types/reflect-metadata", null],\
+            ["@types/telegraf", null],\
+            ["@types/typescript", null],\
+            ["lodash", "npm:4.17.21"],\
+            ["reflect-metadata", "npm:0.1.13"],\
+            ["telegraf", "npm:4.10.0"],\
+            ["typescript", "patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"]\
+          ],\
+          "packagePeers": [\
+            "@nestjs/common",\
+            "@nestjs/core",\
+            "@types/nestjs__common",\
+            "@types/nestjs__core",\
+            "@types/reflect-metadata",\
+            "@types/telegraf",\
+            "@types/typescript",\
+            "reflect-metadata",\
+            "telegraf",\
+            "typescript"\
+          ],\
+          "linkType": "HARD"\
         }],\
         ["virtual:62df35f4f1b356bc64ecb4240f8e0c3d189504bb94a7ffdb6c5c30ce1b16af56e7be9bdfa189f4218e5d718c042317b1d9c670ef4b2da947a06691e46f34c603#npm:2.6.2", {\
           "packageLocation": "./.yarn/__virtual__/nestjs-telegraf-virtual-47103c415e/0/cache/nestjs-telegraf-npm-2.6.2-36245c15a0-9161cb0c7b.zip/node_modules/nestjs-telegraf/",\

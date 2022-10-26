@@ -1707,6 +1707,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fuks-ru/esenin-family-admin-telegram@workspace:entries/admin-telegram"
   dependencies:
+    "@fuks-ru/esenin-family-client": "workspace:0.0.1"
     "@types/node": ^16.11.56
     "@vitejs/plugin-vue": ^3.0.3
     "@vue/tsconfig": ^0.1.3
