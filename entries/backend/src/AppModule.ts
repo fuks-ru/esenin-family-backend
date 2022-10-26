@@ -1,4 +1,4 @@
-import { CommonModule } from '@fuks-ru/common-backend';
+import { CommonModule, EnvGetter } from '@fuks-ru/common-backend';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from '@fuks-ru/auth-module';
@@ -26,7 +26,7 @@ import { BotModule } from 'backend/Bot/BotModule';
         apiPrefix: configGetter.getApiPrefix(),
         statusResolver: configGetter.statusResolver,
         swagger: {
-          generators: ['axios'],
+          generators: ['axios', 'dart'],
         },
       }),
     }),
@@ -35,8 +35,12 @@ import { BotModule } from 'backend/Bot/BotModule';
       useFactory: (configGetter: ConfigGetter) =>
         configGetter.getTypeOrmConfig(),
     }),
-    TelegrafModule.forRoot({
-      token: '5716277443:AAEKXzFLSeyJKCuZNp_mfKNBRUtIGEFA-F0',
+    TelegrafModule.forRootAsync({
+      inject: [ConfigGetter, EnvGetter],
+      useFactory: (configGetter: ConfigGetter, envGetter: EnvGetter) => ({
+        token: configGetter.getTelegramBotToken(),
+        launchOptions: envGetter.isDev() ? false : undefined,
+      }),
     }),
     PubModule,
     PosterModule,

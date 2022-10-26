@@ -1,11 +1,10 @@
 import { ArgumentsHost, Catch, ExceptionFilter, Logger } from '@nestjs/common';
 import { TelegrafArgumentsHost } from 'nestjs-telegraf';
-import { CommonErrorCode, UnauthorizedError } from '@fuks-ru/common';
+import { CommonErrorCode } from '@fuks-ru/common';
 import { Markup } from 'telegraf';
 import { SystemError } from '@fuks-ru/common-backend';
 
 import { IContext } from 'backend/Bot/types/IContext';
-import { ErrorCode } from 'backend/Config/enums/ErrorCode';
 
 @Catch()
 export class TelegrafExceptionFilter implements ExceptionFilter {
@@ -25,7 +24,7 @@ export class TelegrafExceptionFilter implements ExceptionFilter {
 
     if (exception.code === CommonErrorCode.FORBIDDEN) {
       await ctx.replyWithHTML(
-        'Вы не модератор. Обратитесь к администрататору для повышения прав и снова нажмите войти',
+        'Вы не модератор. Обратитесь к администратору для повышения прав и снова нажмите войти',
         Markup.keyboard([Markup.button.contactRequest('Войти')]),
       );
 

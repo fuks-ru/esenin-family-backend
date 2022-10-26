@@ -66,6 +66,12 @@ export class ConfigGetter {
       : this.envGetter.getEnv('INTERNAL_REQUEST_TOKEN');
   }
 
+  public getTelegramBotToken(): string {
+    return this.envGetter.isDev()
+      ? ''
+      : this.envGetter.getEnv('TELEGRAM_BOT_TOKEN');
+  }
+
   private getProdTypeOrmConfig(): TypeOrmModuleOptions {
     return {
       ...ormConfig,

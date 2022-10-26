@@ -1,5 +1,5 @@
-import { I18nResolver, SystemErrorFactory } from '@fuks-ru/common-backend';
-import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
+import { SystemErrorFactory } from '@fuks-ru/common-backend';
+import { Injectable, CanActivate } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { CommonErrorCode } from '@fuks-ru/common';
 import { Schemas } from '@fuks-ru/auth-module';
@@ -22,9 +22,7 @@ export class RolesGuard implements CanActivate {
   /**
    * Проверяет, можно ли пускать пользователя с указанной ролью по маршруту.
    */
-  public async canActivate(
-    context: TelegrafExecutionContext,
-  ): Promise<boolean> {
+  public canActivate(context: TelegrafExecutionContext): boolean {
     const contextHandler = context.getHandler();
 
     const telegrafHost = TelegrafArgumentsHost.create(context);
@@ -50,7 +48,7 @@ export class RolesGuard implements CanActivate {
     if (user?.role === undefined || !requiredRoles.includes(user.role)) {
       throw this.systemErrorFactory.create(
         CommonErrorCode.FORBIDDEN,
-        'Запрещенно',
+        'Запрещено',
       );
     }
 

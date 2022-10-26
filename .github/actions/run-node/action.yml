@@ -29,6 +29,7 @@ runs:
           -e POSTGRES_HOST="esenin-family-postgres" \
           -e PERSONAL_NPM_TOKEN="${{ fromJson(inputs.secret-context).PERSONAL_NPM_TOKEN }}" \
           -e INTERNAL_REQUEST_TOKEN="${{ fromJson(inputs.secret-context).INTERNAL_REQUEST_TOKEN }}" \
+          -e TELEGRAM_BOT_TOKEN="${{ fromJson(inputs.secret-context).ESENIN_TELEGRAM_BOT_TOKEN }}" \
           -v "/server/esenin-family-backend/backend/var":/app/entries/backend/var \
           --network="fuks-ru" \
           difuks/esenin-family-backend \
